@@ -1,0 +1,5297 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+        <title>Registration Form</title>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        <link rel="shortcut icon" href="assests/img/sclogo.png" /> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <style>
+    
+
+@font-face {
+    font-family: 'Raleway', sans-serif;
+}
+/* CSS reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+	margin:0;
+	padding:0;
+}
+html,body {
+	margin:0;
+	padding:0;
+	height: 100%;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,img { 
+	border:0;
+}
+address,caption,cite,code,dfn,th,var {
+	font-style:normal;
+	font-weight:normal;
+}
+ol,ul {
+	list-style:none;
+}
+caption,th {
+	text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+q:before,q:after {
+	content:'';
+}
+abbr,acronym { border:0;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+/* General Demo Style */
+body{
+	font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+	background: #fff url(../images/bg.jpg) repeat top left;
+	font-weight: 400;
+	font-size: 15px;
+	color: #1d3c41;
+	overflow-y: scroll;
+}
+a{
+	color: #333;
+	text-decoration: none;
+}
+.container{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	text-align: center;
+
+}
+.clr{
+	clear: both;
+}
+.container > header{
+	padding: 20px 30px 10px 30px;
+	margin: 0px 20px 10px 20px;
+	position: relative;
+	display: block;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    text-align: center;
+}
+.container > header h1{
+	font-family: 'Raleway', sans-serif;
+	font-size: 35px;
+	line-height: 35px;
+	position: relative;
+	color:#FFF;
+    padding: 0px 0px 5px 0px;
+	font-weight:600;
+}
+.container > header h1 span{
+	color: #7cbcd6;
+	text-shadow: 0px 1px 1px rgba(255,255,255,0.8);
+}
+.container > header h2{
+	font-size: 16px;
+	font-style: italic;
+	color: #2d6277;
+	text-shadow: 0px 1px 1px rgba(255,255,255,0.8);
+}
+/* Header Style */
+.codrops-top{
+	line-height: 24px;
+	font-size: 11px;
+	background: rgba(255, 255, 255, 0.4);
+	text-transform: uppercase;
+	z-index: 9999;
+	position: relative;
+	box-shadow: 1px 0px 2px rgba(0,0,0,0.2);
+}
+.codrops-top a{
+	padding: 0px 10px;
+	letter-spacing: 1px;
+	color: #333;
+	text-shadow: 0px 1px 1px #fff;
+	display: block;
+	float: left;
+}
+.codrops-top a:hover{
+	background: #fff;
+}
+.codrops-top span.right{
+	float: right;
+}
+.codrops-top span.right a{
+	float: left;
+	display: block;
+}
+
+.codrops-demos{
+	text-align:center;
+	display: block;
+	padding: 14px;
+}
+.codrops-demos span{
+	display: inline-block;
+	padding-right: 15px;
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
+}
+.codrops-demos a,
+.codrops-demos a.current-demo,
+.codrops-demos a.current-demo:hover{
+    display: inline-block;
+	font-style: italic;
+	font-size: 12px;
+	padding: 3px 5px;
+	margin: 0px 3px;
+	font-weight: 800;
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.05) inset;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+	background: rgba(104,171,194,0.5);
+}
+.codrops-demos a:hover{
+	background: #4fa2c4;
+}
+.codrops-demos a.current-demo,
+.codrops-demos a.current-demo:hover{
+	color: rgba(104,171,194,1);
+	background: rgba(255,255,255,0.9);
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+}
+
+/* remove codrops styles and reset the whole thing */
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+body{background:url(../images/bs.jpg);
+background-attachment:fixed;
+background-size:cover;
+}
+#container_demo{
+	 text-align: left;
+	 margin: 0;
+	 padding: 0;
+	 margin: 0 auto;
+	 font-family: 'Raleway', sans-serif;
+}
+
+a.hiddenanchor{
+	display: none;
+}
+/** The wrapper that will contain our two forms **/
+#wrapper{
+	width: 60%;
+	right: 0px;
+	min-height: 560px;	
+	margin: 0px auto;	
+	width: 500px;
+	position: relative;
+	opacity: 0.9;	
+}
+/**** Styling the form elements **/
+
+/**** general text styling ****/
+#wrapper a{
+	color: rgb(95, 155, 198);
+	text-decoration: underline;
+}
+
+#wrapper h1{
+	font-size: 48px;
+	color: rgb(6, 106, 117);
+	padding: 2px 0 10px 0;
+	font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 30px;
+}
+/** For the moment only webkit supports the background-clip:text; */
+#wrapper h1{
+    background: -webkit-repeating-linear-gradient(-45deg, 
+	rgb(18, 83, 93) , 
+	rgb(18, 83, 93) 20px, 
+	rgb(64, 111, 118) 20px, 
+	rgb(64, 111, 118) 40px, 
+	rgb(18, 83, 93) 40px);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+}
+#wrapper h1:after{
+	content: ' ';
+	display: block;
+	width: 100%;
+	height: 2px;
+	margin-top: 10px;
+	background: -moz-linear-gradient(left, rgba(147,184,189,0) 0%, rgba(147,184,189,0.8) 20%, rgba(147,184,189,1) 53%, rgba(147,184,189,0.8) 79%, rgba(147,184,189,0) 100%); 
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(147,184,189,0)), color-stop(20%,rgba(147,184,189,0.8)), color-stop(53%,rgba(147,184,189,1)), color-stop(79%,rgba(147,184,189,0.8)), color-stop(100%,rgba(147,184,189,0))); 
+	background: -webkit-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+	background: -o-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+	background: -ms-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+	background: linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
+}
+
+#wrapper p{
+	margin-bottom:15px;
+}
+#wrapper p:first-child{
+	margin: 0px;
+}
+#wrapper label{
+	color: rgb(64, 92, 96);
+	position: relative;
+}
+
+/**** advanced input styling ****/
+/* placeholder */
+::-webkit-input-placeholder  { 
+	color: rgb(190, 188, 188); 
+	font-style: italic;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder{ 
+	color: rgb(190, 188, 188);
+	font-style: italic;
+} 
+input {
+  outline: none;
+}
+
+/* all the input except submit and checkbox */
+#wrapper input:not([type="checkbox"]){
+	width: 92%;
+	margin-top: 4px;
+	padding: 10px 5px 10px 32px;	
+	border: 1px solid rgb(178, 178, 178);
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	  -moz-box-sizing : content-box;
+	       box-sizing : content-box;
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	        border-radius: 3px;
+	-webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	   -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	        box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	-webkit-transition: all 0.2s linear;
+	   -moz-transition: all 0.2s linear;
+	     -o-transition: all 0.2s linear;
+	        transition: all 0.2s linear;
+}
+#wrapper input:not([type="checkbox"]):active,
+#wrapper input:not([type="checkbox"]):focus{
+	border: 1px solid rgba(91, 90, 90, 0.7);
+	background: rgba(238, 236, 240, 0.2);	
+	-webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.9) inset;
+	   -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.9) inset;
+	        box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.9) inset;
+} 
+
+/** the magic icon trick ! **/
+[data-icon]:after {
+    content: attr(data-icon);
+    font-family: 'FontomasCustomRegular';
+    color: rgb(106, 159, 171);
+    position: absolute;
+    left: 10px;
+    top: 35px;
+	width: 30px;
+}
+
+/*styling both submit buttons */
+#wrapper p.button input{
+	width: 30%;
+	cursor: pointer;	
+	background: rgb(61, 157, 179);
+	padding: 8px 5px;
+	font-family: 'BebasNeueRegular','Arial Narrow',Arial,sans-serif;
+	color: #fff;
+	font-size: 24px;	
+	border: 1px solid rgb(28, 108, 122);	
+	margin-bottom: 10px;	
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	        border-radius: 3px;	
+	-webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+	        0px 0px 0px 3px rgb(254, 254, 254),
+	        0px 5px 3px 3px rgb(210, 210, 210);
+	   -moz-box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+	        0px 0px 0px 3px rgb(254, 254, 254),
+	        0px 5px 3px 3px rgb(210, 210, 210);
+	        box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+	        0px 0px 0px 3px rgb(254, 254, 254),
+	        0px 5px 3px 3px rgb(210, 210, 210);
+	-webkit-transition: all 0.2s linear;
+	   -moz-transition: all 0.2s linear;
+	     -o-transition: all 0.2s linear;
+	        transition: all 0.2s linear;
+}
+#wrapper p.button input:hover{
+	background: rgb(74, 179, 198);
+}
+#wrapper p.button input:active,
+#wrapper p.button input:focus{
+	background: rgb(40, 137, 154);
+	position: relative;
+	top: 1px;
+	border: 1px solid rgb(12, 76, 87);	
+	-webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+	   -moz-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+	        box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+}
+p.login.button,
+p.signin.button{
+	text-align: right;
+	margin: 5px 0;
+}
+
+
+/* styling the checkbox "keep me logged in"*/
+.keeplogin{
+	margin-top: -5px;
+}
+.keeplogin input,
+.keeplogin label{
+	display: inline-block;
+	font-size: 12px;	
+	font-style: italic;
+}
+.keeplogin input#loginkeeping{
+	margin-right: 5px;
+}
+.keeplogin label{
+	width: 80%;
+}
+
+
+/*styling the links to change from one form to another */
+
+p.change_link{
+	position: absolute;
+	color: rgb(127, 124, 124);
+	left: 0px;
+	height: 20px;
+	width: 438px;
+	padding: 17px 30px 20px 30px;
+	font-size: 16px	;
+	text-align: right;
+	border-top: 1px solid rgb(219, 229, 232);
+	-webkit-border-radius: 0 0  5px 5px;
+	   -moz-border-radius: 0 0  5px 5px;
+	        border-radius: 0 0  5px 5px;
+	background: rgb(225, 234, 235);
+	background: -moz-repeating-linear-gradient(-45deg, 
+	rgb(247, 247, 247) , 
+	rgb(247, 247, 247) 15px, 
+	rgb(225, 234, 235) 15px, 
+	rgb(225, 234, 235) 30px, 
+	rgb(247, 247, 247) 30px
+	);
+	background: -webkit-repeating-linear-gradient(-45deg, 
+	rgb(247, 247, 247) , 
+	rgb(247, 247, 247) 15px, 
+	rgb(225, 234, 235) 15px, 
+	rgb(225, 234, 235) 30px, 
+	rgb(247, 247, 247) 30px
+	);
+	background: -o-repeating-linear-gradient(-45deg, 
+	rgb(247, 247, 247) , 
+	rgb(247, 247, 247) 15px, 
+	rgb(225, 234, 235) 15px, 
+	rgb(225, 234, 235) 30px, 
+	rgb(247, 247, 247) 30px
+	);
+	background: repeating-linear-gradient(-45deg, 
+	rgb(247, 247, 247) , 
+	rgb(247, 247, 247) 15px, 
+	rgb(225, 234, 235) 15px, 
+	rgb(225, 234, 235) 30px, 
+	rgb(247, 247, 247) 30px
+	);
+}
+#wrapper p.change_link a {
+	display: inline-block;
+	font-weight: bold;
+	background: rgb(247, 248, 241);
+	padding: 2px 6px;
+	color: rgb(29, 162, 193);
+	margin-left: 10px;
+	text-decoration: none;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	border: 1px solid rgb(203, 213, 214);
+	-webkit-transition: all 0.4s linear;
+	-moz-transition: all 0.4s  linear;
+	-o-transition: all 0.4s linear;
+	-ms-transition: all 0.4s  linear;
+	transition: all 0.4s  linear;
+}
+#wrapper p.change_link a:hover {
+	color: rgb(57, 191, 215);
+	background: rgb(247, 247, 247);
+	border: 1px solid rgb(74, 179, 198);
+}
+#wrapper p.change_link a:active{
+	position: relative;
+	top: 1px;
+}
+/** Styling both forms **/
+#register, 
+#login{
+	position: absolute;
+	top: 0px;
+	width: 88%;	
+	padding: 18px 6% 60px 6%;
+	margin:0  35px;
+	background: rgb(247, 247, 247);
+	border: 1px solid rgba(147, 184, 189,0.8);
+	-webkit-box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+	   -moz-box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+	        box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+	-webkit-box-shadow: 5px;
+	-moz-border-radius: 5px;
+		 border-radius: 5px;
+}
+#register{	
+	z-index: 21;
+	opacity: 0;
+}
+#login{
+	z-index: 22;
+}
+#toregister:target ~ #wrapper #register,
+#tologin:target ~ #wrapper #login{
+	-webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.36);
+-moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.36);
+box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.36);
+	z-index: 22;
+	-webkit-animation-name: fadeInLeft;
+	-moz-animation-name: fadeInLeft;
+	-ms-animation-name: fadeInLeft;
+	-o-animation-name: fadeInLeft;
+	animation-name: fadeInLeft;
+	-webkit-animation-delay: .1s;
+	-moz-animation-delay: .1s;
+	-o-animation-delay: .1s;
+	-ms-animation-delay: .1s;
+	animation-delay: .1s;
+}
+#toregister:target ~ #wrapper #login,
+#tologin:target ~ #wrapper #register{
+	-webkit-animation-name: fadeOutLeft;
+	-moz-animation-name: fadeOutLeft;
+	-ms-animation-name: fadeOutLeft;
+	-o-animation-name: fadeOutLeft;
+	animation-name: fadeOutLeft;
+}
+
+/** the actual animation, credit where due : http://daneden.me/animate/ ***/
+.animate{
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-fill-mode: both;
+	
+	-moz-animation-duration: 0.5s;
+	-moz-animation-timing-function: ease;
+	-moz-animation-fill-mode: both;
+	
+	-o-animation-duration: 0.5s;
+	-o-animation-timing-function: ease;
+	-o-animation-fill-mode: both;
+	
+	-ms-animation-duration: 0.5s;
+	-ms-animation-timing-function: ease;
+	-ms-animation-fill-mode: both;
+	
+	animation-duration: 0.5s;
+	animation-timing-function: ease;
+	animation-fill-mode: both;
+}
+
+/** yerk some ugly IE fixes 'cause I know someone will ask "why does it look ugly in IE?", no matter how many warnings I will put in the article */
+
+.lt8 #wrapper input{
+	padding: 10px 5px 10px 32px;
+    width: 92%;
+}
+.lt8 #wrapper input[type=checkbox]{
+	width: 10px;
+	padding: 0;
+}
+.lt8 #wrapper h1{
+	color: #066A75;
+}
+.lt8 #register{	
+	display: none;
+}
+.lt8 p.change_link,
+.ie9 p.change_link{
+	position: absolute;
+	height: 90px;
+	background: transparent;
+}
+
+/*
+Animate.css - http://daneden.me/animate
+LICENSED UNDER THE  MIT LICENSE (MIT)
+
+Copyright (c) 2011 Dan Eden
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+.animated {
+	-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+	-ms-animation-fill-mode: both;
+	-o-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	-ms-animation-duration: 1s;
+	-o-animation-duration: 1s;
+	animation-duration: 1s;
+}
+
+.animated.hinge {
+	-webkit-animation-duration: 2s;
+	-moz-animation-duration: 2s;
+	-ms-animation-duration: 2s;
+	-o-animation-duration: 2s;
+	animation-duration: 2s;
+}
+
+@-webkit-keyframes flash {
+	0%, 50%, 100% {opacity: 1;}	
+	25%, 75% {opacity: 0;}
+}
+
+@-moz-keyframes flash {
+	0%, 50%, 100% {opacity: 1;}	
+	25%, 75% {opacity: 0;}
+}
+
+@-ms-keyframes flash {
+	0%, 50%, 100% {opacity: 1;}	
+	25%, 75% {opacity: 0;}
+}
+
+@-o-keyframes flash {
+	0%, 50%, 100% {opacity: 1;}	
+	25%, 75% {opacity: 0;}
+}
+
+@keyframes flash {
+	0%, 50%, 100% {opacity: 1;}	
+	25%, 75% {opacity: 0;}
+}
+
+.flash {
+	-webkit-animation-name: flash;
+	-moz-animation-name: flash;
+	-ms-animation-name: flash;
+	-o-animation-name: flash;
+	animation-name: flash;
+}
+@-webkit-keyframes shake {
+	0%, 100% {-webkit-transform: translateX(0);}
+	10%, 30%, 50%, 70%, 90% {-webkit-transform: translateX(-10px);}
+	20%, 40%, 60%, 80% {-webkit-transform: translateX(10px);}
+}
+
+@-moz-keyframes shake {
+	0%, 100% {-moz-transform: translateX(0);}
+	10%, 30%, 50%, 70%, 90% {-moz-transform: translateX(-10px);}
+	20%, 40%, 60%, 80% {-moz-transform: translateX(10px);}
+}
+
+@-ms-keyframes shake {
+	0%, 100% {-ms-transform: translateX(0);}
+	10%, 30%, 50%, 70%, 90% {-ms-transform: translateX(-10px);}
+	20%, 40%, 60%, 80% {-ms-transform: translateX(10px);}
+}
+
+@-o-keyframes shake {
+	0%, 100% {-o-transform: translateX(0);}
+	10%, 30%, 50%, 70%, 90% {-o-transform: translateX(-10px);}
+	20%, 40%, 60%, 80% {-o-transform: translateX(10px);}
+}
+
+@keyframes shake {
+	0%, 100% {transform: translateX(0);}
+	10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+	20%, 40%, 60%, 80% {transform: translateX(10px);}
+}
+
+.shake {
+	-webkit-animation-name: shake;
+	-moz-animation-name: shake;
+	-ms-animation-name: shake;
+	-o-animation-name: shake;
+	animation-name: shake;
+}
+@-webkit-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
+	40% {-webkit-transform: translateY(-30px);}
+	60% {-webkit-transform: translateY(-15px);}
+}
+
+@-moz-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+	40% {-moz-transform: translateY(-30px);}
+	60% {-moz-transform: translateY(-15px);}
+}
+
+@-ms-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-ms-transform: translateY(0);}
+	40% {-ms-transform: translateY(-30px);}
+	60% {-ms-transform: translateY(-15px);}
+}
+
+@-o-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+	40% {-o-transform: translateY(-30px);}
+	60% {-o-transform: translateY(-15px);}
+}
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
+}
+
+.bounce {
+	-webkit-animation-name: bounce;
+	-moz-animation-name: bounce;
+	-ms-animation-name: bounce;
+	-o-animation-name: bounce;
+	animation-name: bounce;
+}
+@-webkit-keyframes tada {
+	0% {-webkit-transform: scale(1);}	
+	10%, 20% {-webkit-transform: scale(0.9) rotate(-3deg);}
+	30%, 50%, 70%, 90% {-webkit-transform: scale(1.1) rotate(3deg);}
+	40%, 60%, 80% {-webkit-transform: scale(1.1) rotate(-3deg);}
+	100% {-webkit-transform: scale(1) rotate(0);}
+}
+
+@-moz-keyframes tada {
+	0% {-moz-transform: scale(1);}	
+	10%, 20% {-moz-transform: scale(0.9) rotate(-3deg);}
+	30%, 50%, 70%, 90% {-moz-transform: scale(1.1) rotate(3deg);}
+	40%, 60%, 80% {-moz-transform: scale(1.1) rotate(-3deg);}
+	100% {-moz-transform: scale(1) rotate(0);}
+}
+
+@-ms-keyframes tada {
+	0% {-ms-transform: scale(1);}	
+	10%, 20% {-ms-transform: scale(0.9) rotate(-3deg);}
+	30%, 50%, 70%, 90% {-ms-transform: scale(1.1) rotate(3deg);}
+	40%, 60%, 80% {-ms-transform: scale(1.1) rotate(-3deg);}
+	100% {-ms-transform: scale(1) rotate(0);}
+}
+
+@-o-keyframes tada {
+	0% {-o-transform: scale(1);}	
+	10%, 20% {-o-transform: scale(0.9) rotate(-3deg);}
+	30%, 50%, 70%, 90% {-o-transform: scale(1.1) rotate(3deg);}
+	40%, 60%, 80% {-o-transform: scale(1.1) rotate(-3deg);}
+	100% {-o-transform: scale(1) rotate(0);}
+}
+
+@keyframes tada {
+	0% {transform: scale(1);}	
+	10%, 20% {transform: scale(0.9) rotate(-3deg);}
+	30%, 50%, 70%, 90% {transform: scale(1.1) rotate(3deg);}
+	40%, 60%, 80% {transform: scale(1.1) rotate(-3deg);}
+	100% {transform: scale(1) rotate(0);}
+}
+
+.tada {
+	-webkit-animation-name: tada;
+	-moz-animation-name: tada;
+	-ms-animation-name: tada;
+	-o-animation-name: tada;
+	animation-name: tada;
+}
+@-webkit-keyframes swing {
+	20%, 40%, 60%, 80%, 100% { -webkit-transform-origin: top center; }
+	20% { -webkit-transform: rotate(15deg); }	
+	40% { -webkit-transform: rotate(-10deg); }
+	60% { -webkit-transform: rotate(5deg); }	
+	80% { -webkit-transform: rotate(-5deg); }	
+	100% { -webkit-transform: rotate(0deg); }
+}
+
+@-moz-keyframes swing {
+	20% { -moz-transform: rotate(15deg); }	
+	40% { -moz-transform: rotate(-10deg); }
+	60% { -moz-transform: rotate(5deg); }	
+	80% { -moz-transform: rotate(-5deg); }	
+	100% { -moz-transform: rotate(0deg); }
+}
+
+@-ms-keyframes swing {
+	20% { -ms-transform: rotate(15deg); }	
+	40% { -ms-transform: rotate(-10deg); }
+	60% { -ms-transform: rotate(5deg); }	
+	80% { -ms-transform: rotate(-5deg); }	
+	100% { -ms-transform: rotate(0deg); }
+}
+
+@-o-keyframes swing {
+	20% { -o-transform: rotate(15deg); }	
+	40% { -o-transform: rotate(-10deg); }
+	60% { -o-transform: rotate(5deg); }	
+	80% { -o-transform: rotate(-5deg); }	
+	100% { -o-transform: rotate(0deg); }
+}
+
+@keyframes swing {
+	20% { transform: rotate(15deg); }	
+	40% { transform: rotate(-10deg); }
+	60% { transform: rotate(5deg); }	
+	80% { transform: rotate(-5deg); }	
+	100% { transform: rotate(0deg); }
+}
+
+.swing {
+	-webkit-transform-origin: top center;
+	-moz-transform-origin: top center;
+	-ms-transform-origin: top center;
+	-o-transform-origin: top center;
+	transform-origin: top center;
+	-webkit-animation-name: swing;
+	-moz-animation-name: swing;
+	-ms-animation-name: swing;
+	-o-animation-name: swing;
+	animation-name: swing;
+}
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
+@-webkit-keyframes wobble {
+  0% { -webkit-transform: translateX(0%); }
+  15% { -webkit-transform: translateX(-25%) rotate(-5deg); }
+  30% { -webkit-transform: translateX(20%) rotate(3deg); }
+  45% { -webkit-transform: translateX(-15%) rotate(-3deg); }
+  60% { -webkit-transform: translateX(10%) rotate(2deg); }
+  75% { -webkit-transform: translateX(-5%) rotate(-1deg); }
+  100% { -webkit-transform: translateX(0%); }
+}
+
+@-moz-keyframes wobble {
+  0% { -moz-transform: translateX(0%); }
+  15% { -moz-transform: translateX(-25%) rotate(-5deg); }
+  30% { -moz-transform: translateX(20%) rotate(3deg); }
+  45% { -moz-transform: translateX(-15%) rotate(-3deg); }
+  60% { -moz-transform: translateX(10%) rotate(2deg); }
+  75% { -moz-transform: translateX(-5%) rotate(-1deg); }
+  100% { -moz-transform: translateX(0%); }
+}
+
+@-ms-keyframes wobble {
+  0% { -ms-transform: translateX(0%); }
+  15% { -ms-transform: translateX(-25%) rotate(-5deg); }
+  30% { -ms-transform: translateX(20%) rotate(3deg); }
+  45% { -ms-transform: translateX(-15%) rotate(-3deg); }
+  60% { -ms-transform: translateX(10%) rotate(2deg); }
+  75% { -ms-transform: translateX(-5%) rotate(-1deg); }
+  100% { -ms-transform: translateX(0%); }
+}
+
+@-o-keyframes wobble {
+  0% { -o-transform: translateX(0%); }
+  15% { -o-transform: translateX(-25%) rotate(-5deg); }
+  30% { -o-transform: translateX(20%) rotate(3deg); }
+  45% { -o-transform: translateX(-15%) rotate(-3deg); }
+  60% { -o-transform: translateX(10%) rotate(2deg); }
+  75% { -o-transform: translateX(-5%) rotate(-1deg); }
+  100% { -o-transform: translateX(0%); }
+}
+
+@keyframes wobble {
+  0% { transform: translateX(0%); }
+  15% { transform: translateX(-25%) rotate(-5deg); }
+  30% { transform: translateX(20%) rotate(3deg); }
+  45% { transform: translateX(-15%) rotate(-3deg); }
+  60% { transform: translateX(10%) rotate(2deg); }
+  75% { transform: translateX(-5%) rotate(-1deg); }
+  100% { transform: translateX(0%); }
+}
+
+.wobble {
+	-webkit-animation-name: wobble;
+	-moz-animation-name: wobble;
+	-ms-animation-name: wobble;
+	-o-animation-name: wobble;
+	animation-name: wobble;
+}
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
+@-webkit-keyframes pulse {
+    0% { -webkit-transform: scale(1); }	
+	50% { -webkit-transform: scale(1.1); }
+    100% { -webkit-transform: scale(1); }
+}
+@-moz-keyframes pulse {
+    0% { -moz-transform: scale(1); }	
+	50% { -moz-transform: scale(1.1); }
+    100% { -moz-transform: scale(1); }
+}
+@-ms-keyframes pulse {
+    0% { -ms-transform: scale(1); }	
+	50% { -ms-transform: scale(1.1); }
+    100% { -ms-transform: scale(1); }
+}
+@-o-keyframes pulse {
+    0% { -o-transform: scale(1); }	
+	50% { -o-transform: scale(1.1); }
+    100% { -o-transform: scale(1); }
+}
+@keyframes pulse {
+    0% { transform: scale(1); }	
+	50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+	-webkit-animation-name: pulse;
+	-moz-animation-name: pulse;
+	-ms-animation-name: pulse;
+	-o-animation-name: pulse;
+	animation-name: pulse;
+}
+@-webkit-keyframes flip {
+	0% {
+		-webkit-transform: perspective(400px) rotateY(0);
+		-webkit-animation-timing-function: ease-out;
+	}
+	40% {
+		-webkit-transform: perspective(400px) translateZ(150px) rotateY(170deg);
+		-webkit-animation-timing-function: ease-out;
+	}
+	50% {
+		-webkit-transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+		-webkit-animation-timing-function: ease-in;
+	}
+	80% {
+		-webkit-transform: perspective(400px) rotateY(360deg) scale(.95);
+		-webkit-animation-timing-function: ease-in;
+	}
+	100% {
+		-webkit-transform: perspective(400px) scale(1);
+		-webkit-animation-timing-function: ease-in;
+	}
+}
+@-moz-keyframes flip {
+	0% {
+		-moz-transform: perspective(400px) rotateY(0);
+		-moz-animation-timing-function: ease-out;
+	}
+	40% {
+		-moz-transform: perspective(400px) translateZ(150px) rotateY(170deg);
+		-moz-animation-timing-function: ease-out;
+	}
+	50% {
+		-moz-transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+		-moz-animation-timing-function: ease-in;
+	}
+	80% {
+		-moz-transform: perspective(400px) rotateY(360deg) scale(.95);
+		-moz-animation-timing-function: ease-in;
+	}
+	100% {
+		-moz-transform: perspective(400px) scale(1);
+		-moz-animation-timing-function: ease-in;
+	}
+}
+@-ms-keyframes flip {
+	0% {
+		-ms-transform: perspective(400px) rotateY(0);
+		-ms-animation-timing-function: ease-out;
+	}
+	40% {
+		-ms-transform: perspective(400px) translateZ(150px) rotateY(170deg);
+		-ms-animation-timing-function: ease-out;
+	}
+	50% {
+		-ms-transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+		-ms-animation-timing-function: ease-in;
+	}
+	80% {
+		-ms-transform: perspective(400px) rotateY(360deg) scale(.95);
+		-ms-animation-timing-function: ease-in;
+	}
+	100% {
+		-ms-transform: perspective(400px) scale(1);
+		-ms-animation-timing-function: ease-in;
+	}
+}
+@-o-keyframes flip {
+	0% {
+		-o-transform: perspective(400px) rotateY(0);
+		-o-animation-timing-function: ease-out;
+	}
+	40% {
+		-o-transform: perspective(400px) translateZ(150px) rotateY(170deg);
+		-o-animation-timing-function: ease-out;
+	}
+	50% {
+		-o-transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+		-o-animation-timing-function: ease-in;
+	}
+	80% {
+		-o-transform: perspective(400px) rotateY(360deg) scale(.95);
+		-o-animation-timing-function: ease-in;
+	}
+	100% {
+		-o-transform: perspective(400px) scale(1);
+		-o-animation-timing-function: ease-in;
+	}
+}
+@keyframes flip {
+	0% {
+		transform: perspective(400px) rotateY(0);
+		animation-timing-function: ease-out;
+	}
+	40% {
+		transform: perspective(400px) translateZ(150px) rotateY(170deg);
+		animation-timing-function: ease-out;
+	}
+	50% {
+		transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+		animation-timing-function: ease-in;
+	}
+	80% {
+		transform: perspective(400px) rotateY(360deg) scale(.95);
+		animation-timing-function: ease-in;
+	}
+	100% {
+		transform: perspective(400px) scale(1);
+		animation-timing-function: ease-in;
+	}
+}
+
+.flip {
+	-webkit-backface-visibility: visible !important;
+	-webkit-animation-name: flip;
+	-moz-backface-visibility: visible !important;
+	-moz-animation-name: flip;
+	-ms-backface-visibility: visible !important;
+	-ms-animation-name: flip;
+	-o-backface-visibility: visible !important;
+	-o-animation-name: flip;
+	backface-visibility: visible !important;
+	animation-name: flip;
+}
+@-webkit-keyframes flipInX {
+    0% {
+        -webkit-transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+    
+    40% {
+        -webkit-transform: perspective(400px) rotateX(-10deg);
+    }
+    
+    70% {
+        -webkit-transform: perspective(400px) rotateX(10deg);
+    }
+    
+    100% {
+        -webkit-transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+@-moz-keyframes flipInX {
+    0% {
+        -moz-transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+    
+    40% {
+        -moz-transform: perspective(400px) rotateX(-10deg);
+    }
+    
+    70% {
+        -moz-transform: perspective(400px) rotateX(10deg);
+    }
+    
+    100% {
+        -moz-transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+@-ms-keyframes flipInX {
+    0% {
+        -ms-transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+    
+    40% {
+        -ms-transform: perspective(400px) rotateX(-10deg);
+    }
+    
+    70% {
+        -ms-transform: perspective(400px) rotateX(10deg);
+    }
+    
+    100% {
+        -ms-transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+@-o-keyframes flipInX {
+    0% {
+        -o-transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+    
+    40% {
+        -o-transform: perspective(400px) rotateX(-10deg);
+    }
+    
+    70% {
+        -o-transform: perspective(400px) rotateX(10deg);
+    }
+    
+    100% {
+        -o-transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+@keyframes flipInX {
+    0% {
+        transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+    
+    40% {
+        transform: perspective(400px) rotateX(-10deg);
+    }
+    
+    70% {
+        transform: perspective(400px) rotateX(10deg);
+    }
+    
+    100% {
+        transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+
+.flipInX {
+	-webkit-backface-visibility: visible !important;
+	-webkit-animation-name: flipInX;
+	-moz-backface-visibility: visible !important;
+	-moz-animation-name: flipInX;
+	-ms-backface-visibility: visible !important;
+	-ms-animation-name: flipInX;
+	-o-backface-visibility: visible !important;
+	-o-animation-name: flipInX;
+	backface-visibility: visible !important;
+	animation-name: flipInX;
+}
+@-webkit-keyframes flipOutX {
+    0% {
+        -webkit-transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+	100% {
+        -webkit-transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes flipOutX {
+    0% {
+        -moz-transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+	100% {
+        -moz-transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+}
+
+@-ms-keyframes flipOutX {
+    0% {
+        -ms-transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+	100% {
+        -ms-transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+}
+
+@-o-keyframes flipOutX {
+    0% {
+        -o-transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+	100% {
+        -o-transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+}
+
+@keyframes flipOutX {
+    0% {
+        transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+    }
+	100% {
+        transform: perspective(400px) rotateX(90deg);
+        opacity: 0;
+    }
+}
+
+.flipOutX {
+	-webkit-animation-name: flipOutX;
+	-webkit-backface-visibility: visible !important;
+	-moz-animation-name: flipOutX;
+	-moz-backface-visibility: visible !important;
+	-ms-animation-name: flipOutX;
+	-ms-backface-visibility: visible !important;
+	-o-animation-name: flipOutX;
+	-o-backface-visibility: visible !important;
+	animation-name: flipOutX;
+	backface-visibility: visible !important;
+}
+@-webkit-keyframes flipInY {
+    0% {
+        -webkit-transform: perspective(400px) rotateY(90deg);
+        opacity: 0;
+    }
+    
+    40% {
+        -webkit-transform: perspective(400px) rotateY(-10deg);
+    }
+    
+    70% {
+        -webkit-transform: perspective(400px) rotateY(10deg);
+    }
+    
+    100% {
+        -webkit-transform: perspective(400px) rotateY(0deg);
+        opacity: 1;
+    }
+}
+@-moz-keyframes flipInY {
+    0% {
+        -moz-transform: perspective(400px) rotateY(90deg);
+        opacity: 0;
+    }
+    
+    40% {
+        -moz-transform: perspective(400px) rotateY(-10deg);
+    }
+    
+    70% {
+        -moz-transform: perspective(400px) rotateY(10deg);
+    }
+    
+    100% {
+        -moz-transform: perspective(400px) rotateY(0deg);
+        opacity: 1;
+    }
+}
+@-ms-keyframes flipInY {
+    0% {
+        -ms-transform: perspective(400px) rotateY(90deg);
+        opacity: 0;
+    }
+    
+    40% {
+        -ms-transform: perspective(400px) rotateY(-10deg);
+    }
+    
+    70% {
+        -ms-transform: perspective(400px) rotateY(10deg);
+    }
+    
+    100% {
+        -ms-transform: perspective(400px) rotateY(0deg);
+        opacity: 1;
+    }
+}
+@-o-keyframes flipInY {
+    0% {
+        -o-transform: perspective(400px) rotateY(90deg);
+        opacity: 0;
+    }
+    
+    40% {
+        -o-transform: perspective(400px) rotateY(-10deg);
+    }
+    
+    70% {
+        -o-transform: perspective(400px) rotateY(10deg);
+    }
+    
+    100% {
+        -o-transform: perspective(400px) rotateY(0deg);
+        opacity: 1;
+    }
+}
+@keyframes flipInY {
+    0% {
+        transform: perspective(400px) rotateY(90deg);
+        opacity: 0;
+    }
+    
+    40% {
+        transform: perspective(400px) rotateY(-10deg);
+    }
+    
+    70% {
+        transform: perspective(400px) rotateY(10deg);
+    }
+    
+    100% {
+        transform: perspective(400px) rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+.flipInY {
+	-webkit-backface-visibility: visible !important;
+	-webkit-animation-name: flipInY;
+	-moz-backface-visibility: visible !important;
+	-moz-animation-name: flipInY;
+	-ms-backface-visibility: visible !important;
+	-ms-animation-name: flipInY;
+	-o-backface-visibility: visible !important;
+	-o-animation-name: flipInY;
+	backface-visibility: visible !important;
+	animation-name: flipInY;
+}
+@-webkit-keyframes flipOutY {
+    0% {
+        -webkit-transform: perspective(400px) rotateY(0deg);
+        opacity: 1;
+    }
+	100% {
+        -webkit-transform: perspective(400px) rotateY(90deg);
+        opacity: 0;
+    }
+}
+@-moz-keyframes flipOutY {
+    0% {
+        -moz-transform: perspective(400px) rotateY(0deg);
+        opacity: 1;
+    }
+	100% {
+        -moz-transform: perspective(400px) rotateY(90deg);
+        opacity: 0;
+    }
+}
+@-ms-keyframes flipOutY {
+    0% {
+        -ms-transform: perspective(400px) rotateY(0deg);
+        opacity: 1;
+    }
+	100% {
+        -ms-transform: perspective(400px) rotateY(90deg);
+        opacity: 0;
+    }
+}
+@-o-keyframes flipOutY {
+    0% {
+        -o-transform: perspective(400px) rotateY(0deg);
+        opacity: 1;
+    }
+	100% {
+        -o-transform: perspective(400px) rotateY(90deg);
+        opacity: 0;
+    }
+}
+@keyframes flipOutY {
+    0% {
+        transform: perspective(400px) rotateY(0deg);
+        opacity: 1;
+    }
+	100% {
+        transform: perspective(400px) rotateY(90deg);
+        opacity: 0;
+    }
+}
+
+.flipOutY {
+	-webkit-backface-visibility: visible !important;
+	-webkit-animation-name: flipOutY;
+	-moz-backface-visibility: visible !important;
+	-moz-animation-name: flipOutY;
+	-ms-backface-visibility: visible !important;
+	-ms-animation-name: flipOutY;
+	-o-backface-visibility: visible !important;
+	-o-animation-name: flipOutY;
+	backface-visibility: visible !important;
+	animation-name: flipOutY;
+}
+@-webkit-keyframes fadeIn {
+	0% {opacity: 0;}	
+	100% {opacity: 1;}
+}
+
+@-moz-keyframes fadeIn {
+	0% {opacity: 0;}	
+	100% {opacity: 1;}
+}
+
+@-ms-keyframes fadeIn {
+	0% {opacity: 0;}	
+	100% {opacity: 1;}
+}
+
+@-o-keyframes fadeIn {
+	0% {opacity: 0;}	
+	100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+	0% {opacity: 0;}	
+	100% {opacity: 1;}
+}
+
+.fadeIn {
+	-webkit-animation-name: fadeIn;
+	-moz-animation-name: fadeIn;
+	-ms-animation-name: fadeIn;
+	-o-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+@-webkit-keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(20px);
+	}
+	
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+	}
+}
+
+@-moz-keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		-moz-transform: translateY(20px);
+	}
+	
+	100% {
+		opacity: 1;
+		-moz-transform: translateY(0);
+	}
+}
+
+@-ms-keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		-ms-transform: translateY(20px);
+	}
+	
+	100% {
+		opacity: 1;
+		-ms-transform: translateY(0);
+	}
+}
+
+@-o-keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		-o-transform: translateY(20px);
+	}
+	
+	100% {
+		opacity: 1;
+		-o-transform: translateY(0);
+	}
+}
+
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.fadeInUp {
+	-webkit-animation-name: fadeInUp;
+	-moz-animation-name: fadeInUp;
+	-ms-animation-name: fadeInUp;
+	-o-animation-name: fadeInUp;
+	animation-name: fadeInUp;
+}
+@-webkit-keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(-20px);
+	}
+	
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+	}
+}
+
+@-moz-keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		-moz-transform: translateY(-20px);
+	}
+	
+	100% {
+		opacity: 1;
+		-moz-transform: translateY(0);
+	}
+}
+
+@-ms-keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		-ms-transform: translateY(-20px);
+	}
+	
+	100% {
+		opacity: 1;
+		-ms-transform: translateY(0);
+	}
+}
+
+@-o-keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		-ms-transform: translateY(-20px);
+	}
+	
+	100% {
+		opacity: 1;
+		-ms-transform: translateY(0);
+	}
+}
+
+@keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.fadeInDown {
+	-webkit-animation-name: fadeInDown;
+	-moz-animation-name: fadeInDown;
+	-ms-animation-name: fadeInDown;
+	-o-animation-name: fadeInDown;
+	animation-name: fadeInDown;
+}
+@-webkit-keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(-20px);
+	}
+	
+	100% {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+	}
+}
+
+@-moz-keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		-moz-transform: translateX(-20px);
+	}
+	
+	100% {
+		opacity: 1;
+		-moz-transform: translateX(0);
+	}
+}
+
+@-ms-keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		-ms-transform: translateX(-20px);
+	}
+	
+	100% {
+		opacity: 1;
+		-ms-transform: translateX(0);
+	}
+}
+
+@-o-keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		-o-transform: translateX(-20px);
+	}
+	
+	100% {
+		opacity: 1;
+		-o-transform: translateX(0);
+	}
+}
+
+@keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-20px);
+	}
+	
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.fadeInLeft {
+	-webkit-animation-name: fadeInLeft;
+	-moz-animation-name: fadeInLeft;
+	-ms-animation-name: fadeInLeft;
+	-o-animation-name: fadeInLeft;
+	animation-name: fadeInLeft;
+}
+@-webkit-keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(20px);
+	}
+	
+	100% {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+	}
+}
+
+@-moz-keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		-moz-transform: translateX(20px);
+	}
+	
+	100% {
+		opacity: 1;
+		-moz-transform: translateX(0);
+	}
+}
+
+@-ms-keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		-ms-transform: translateX(20px);
+	}
+	
+	100% {
+		opacity: 1;
+		-ms-transform: translateX(0);
+	}
+}
+
+@-o-keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		-o-transform: translateX(20px);
+	}
+	
+	100% {
+		opacity: 1;
+		-o-transform: translateX(0);
+	}
+}
+
+@keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		transform: translateX(20px);
+	}
+	
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.fadeInRight {
+	-webkit-animation-name: fadeInRight;
+	-moz-animation-name: fadeInRight;
+	-ms-animation-name: fadeInRight;
+	-o-animation-name: fadeInRight;
+	animation-name: fadeInRight;
+}
+@-webkit-keyframes fadeInUpBig {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(2000px);
+	}
+	
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+	}
+}
+
+@-moz-keyframes fadeInUpBig {
+	0% {
+		opacity: 0;
+		-moz-transform: translateY(2000px);
+	}
+	
+	100% {
+		opacity: 1;
+		-moz-transform: translateY(0);
+	}
+}
+
+@-ms-keyframes fadeInUpBig {
+	0% {
+		opacity: 0;
+		-ms-transform: translateY(2000px);
+	}
+	
+	100% {
+		opacity: 1;
+		-ms-transform: translateY(0);
+	}
+}
+
+@-o-keyframes fadeInUpBig {
+	0% {
+		opacity: 0;
+		-o-transform: translateY(2000px);
+	}
+	
+	100% {
+		opacity: 1;
+		-o-transform: translateY(0);
+	}
+}
+
+@keyframes fadeInUpBig {
+	0% {
+		opacity: 0;
+		transform: translateY(2000px);
+	}
+	
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.fadeInUpBig {
+	-webkit-animation-name: fadeInUpBig;
+	-moz-animation-name: fadeInUpBig;
+	-ms-animation-name: fadeInUpBig;
+	-o-animation-name: fadeInUpBig;
+	animation-name: fadeInUpBig;
+}
+@-webkit-keyframes fadeInDownBig {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(-2000px);
+	}
+	
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+	}
+}
+
+@-moz-keyframes fadeInDownBig {
+	0% {
+		opacity: 0;
+		-moz-transform: translateY(-2000px);
+	}
+	
+	100% {
+		opacity: 1;
+		-moz-transform: translateY(0);
+	}
+}
+
+@-ms-keyframes fadeInDownBig {
+	0% {
+		opacity: 0;
+		-ms-transform: translateY(-2000px);
+	}
+	
+	100% {
+		opacity: 1;
+		-ms-transform: translateY(0);
+	}
+}
+
+@-o-keyframes fadeInDownBig {
+	0% {
+		opacity: 0;
+		-o-transform: translateY(-2000px);
+	}
+	
+	100% {
+		opacity: 1;
+		-o-transform: translateY(0);
+	}
+}
+
+@keyframes fadeInDownBig {
+	0% {
+		opacity: 0;
+		transform: translateY(-2000px);
+	}
+	
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.fadeInDownBig {
+	-webkit-animation-name: fadeInDownBig;
+	-moz-animation-name: fadeInDownBig;
+	-ms-animation-name: fadeInDownBig;
+	-o-animation-name: fadeInDownBig;
+	animation-name: fadeInDownBig;
+}
+@-webkit-keyframes fadeInLeftBig {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(-2000px);
+	}
+	
+	100% {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+	}
+}
+@-moz-keyframes fadeInLeftBig {
+	0% {
+		opacity: 0;
+		-moz-transform: translateX(-2000px);
+	}
+	
+	100% {
+		opacity: 1;
+		-moz-transform: translateX(0);
+	}
+}
+@-ms-keyframes fadeInLeftBig {
+	0% {
+		opacity: 0;
+		-ms-transform: translateX(-2000px);
+	}
+	
+	100% {
+		opacity: 1;
+		-ms-transform: translateX(0);
+	}
+}
+@-o-keyframes fadeInLeftBig {
+	0% {
+		opacity: 0;
+		-o-transform: translateX(-2000px);
+	}
+	
+	100% {
+		opacity: 1;
+		-o-transform: translateX(0);
+	}
+}
+@keyframes fadeInLeftBig {
+	0% {
+		opacity: 0;
+		transform: translateX(-2000px);
+	}
+	
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.fadeInLeftBig {
+	-webkit-animation-name: fadeInLeftBig;
+	-moz-animation-name: fadeInLeftBig;
+	-ms-animation-name: fadeInLeftBig;
+	-o-animation-name: fadeInLeftBig;
+	animation-name: fadeInLeftBig;
+}
+@-webkit-keyframes fadeInRightBig {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(2000px);
+	}
+	
+	100% {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+	}
+}
+
+@-moz-keyframes fadeInRightBig {
+	0% {
+		opacity: 0;
+		-moz-transform: translateX(2000px);
+	}
+	
+	100% {
+		opacity: 1;
+		-moz-transform: translateX(0);
+	}
+}
+
+@-ms-keyframes fadeInRightBig {
+	0% {
+		opacity: 0;
+		-ms-transform: translateX(2000px);
+	}
+	
+	100% {
+		opacity: 1;
+		-ms-transform: translateX(0);
+	}
+}
+
+@-o-keyframes fadeInRightBig {
+	0% {
+		opacity: 0;
+		-o-transform: translateX(2000px);
+	}
+	
+	100% {
+		opacity: 1;
+		-o-transform: translateX(0);
+	}
+}
+
+@keyframes fadeInRightBig {
+	0% {
+		opacity: 0;
+		transform: translateX(2000px);
+	}
+	
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.fadeInRightBig {
+	-webkit-animation-name: fadeInRightBig;
+	-moz-animation-name: fadeInRightBig;
+	-ms-animation-name: fadeInRightBig;
+	-o-animation-name: fadeInRightBig;
+	animation-name: fadeInRightBig;
+}
+@-webkit-keyframes fadeOut {
+	0% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+@-moz-keyframes fadeOut {
+	0% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+@-ms-keyframes fadeOut {
+	0% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+@-o-keyframes fadeOut {
+	0% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+@keyframes fadeOut {
+	0% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+.fadeOut {
+	-webkit-animation-name: fadeOut;
+	-moz-animation-name: fadeOut;
+	-ms-animation-name: fadeOut;
+	-o-animation-name: fadeOut;
+	animation-name: fadeOut;
+}
+@-webkit-keyframes fadeOutUp {
+	0% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-webkit-transform: translateY(-20px);
+	}
+}
+@-moz-keyframes fadeOutUp {
+	0% {
+		opacity: 1;
+		-moz-transform: translateY(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-moz-transform: translateY(-20px);
+	}
+}
+@-ms-keyframes fadeOutUp {
+	0% {
+		opacity: 1;
+		-ms-transform: translateY(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-ms-transform: translateY(-20px);
+	}
+}
+@-o-keyframes fadeOutUp {
+	0% {
+		opacity: 1;
+		-o-transform: translateY(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-o-transform: translateY(-20px);
+	}
+}
+@keyframes fadeOutUp {
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	
+	100% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+}
+
+.fadeOutUp {
+	-webkit-animation-name: fadeOutUp;
+	-moz-animation-name: fadeOutUp;
+	-ms-animation-name: fadeOutUp;
+	-o-animation-name: fadeOutUp;
+	animation-name: fadeOutUp;
+}
+@-webkit-keyframes fadeOutDown {
+	0% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-webkit-transform: translateY(20px);
+	}
+}
+
+@-moz-keyframes fadeOutDown {
+	0% {
+		opacity: 1;
+		-moz-transform: translateY(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-moz-transform: translateY(20px);
+	}
+}
+
+@-ms-keyframes fadeOutDown {
+	0% {
+		opacity: 1;
+		-ms-transform: translateY(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-ms-transform: translateY(20px);
+	}
+}
+
+@-o-keyframes fadeOutDown {
+	0% {
+		opacity: 1;
+		-o-transform: translateY(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-o-transform: translateY(20px);
+	}
+}
+
+@keyframes fadeOutDown {
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	
+	100% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+}
+
+.fadeOutDown {
+	-webkit-animation-name: fadeOutDown;
+	-moz-animation-name: fadeOutDown;
+	-ms-animation-name: fadeOutDown;
+	-o-animation-name: fadeOutDown;
+	animation-name: fadeOutDown;
+}
+@-webkit-keyframes fadeOutLeft {
+	0% {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-webkit-transform: translateX(-20px);
+	}
+}
+
+@-moz-keyframes fadeOutLeft {
+	0% {
+		opacity: 1;
+		-moz-transform: translateX(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-moz-transform: translateX(-20px);
+	}
+}
+
+@-ms-keyframes fadeOutLeft {
+	0% {
+		opacity: 1;
+		-ms-transform: translateX(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-ms-transform: translateX(-20px);
+	}
+}
+
+@-o-keyframes fadeOutLeft {
+	0% {
+		opacity: 1;
+		-o-transform: translateX(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-o-transform: translateX(-20px);
+	}
+}
+
+@keyframes fadeOutLeft {
+	0% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	
+	100% {
+		opacity: 0;
+		transform: translateX(-20px);
+	}
+}
+
+.fadeOutLeft {
+	-webkit-animation-name: fadeOutLeft;
+	-moz-animation-name: fadeOutLeft;
+	-ms-animation-name: fadeOutLeft;
+	-o-animation-name: fadeOutLeft;
+	animation-name: fadeOutLeft;
+}
+@-webkit-keyframes fadeOutRight {
+	0% {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-webkit-transform: translateX(20px);
+	}
+}
+
+@-moz-keyframes fadeOutRight {
+	0% {
+		opacity: 1;
+		-moz-transform: translateX(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-moz-transform: translateX(20px);
+	}
+}
+
+@-ms-keyframes fadeOutRight {
+	0% {
+		opacity: 1;
+		-ms-transform: translateX(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-ms-transform: translateX(20px);
+	}
+}
+
+@-o-keyframes fadeOutRight {
+	0% {
+		opacity: 1;
+		-o-transform: translateX(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-o-transform: translateX(20px);
+	}
+}
+
+@keyframes fadeOutRight {
+	0% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	
+	100% {
+		opacity: 0;
+		transform: translateX(20px);
+	}
+}
+
+.fadeOutRight {
+	-webkit-animation-name: fadeOutRight;
+	-moz-animation-name: fadeOutRight;
+	-ms-animation-name: fadeOutRight;
+	-o-animation-name: fadeOutRight;
+	animation-name: fadeOutRight;
+}
+@-webkit-keyframes fadeOutUpBig {
+	0% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-webkit-transform: translateY(-2000px);
+	}
+}
+
+@-moz-keyframes fadeOutUpBig {
+	0% {
+		opacity: 1;
+		-moz-transform: translateY(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-moz-transform: translateY(-2000px);
+	}
+}
+
+@-ms-keyframes fadeOutUpBig {
+	0% {
+		opacity: 1;
+		-ms-transform: translateY(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-ms-transform: translateY(-2000px);
+	}
+}
+
+@-o-keyframes fadeOutUpBig {
+	0% {
+		opacity: 1;
+		-o-transform: translateY(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-o-transform: translateY(-2000px);
+	}
+}
+
+@keyframes fadeOutUpBig {
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	
+	100% {
+		opacity: 0;
+		transform: translateY(-2000px);
+	}
+}
+
+.fadeOutUpBig {
+	-webkit-animation-name: fadeOutUpBig;
+	-moz-animation-name: fadeOutUpBig;
+	-ms-animation-name: fadeOutUpBig;
+	-o-animation-name: fadeOutUpBig;
+	animation-name: fadeOutUpBig;
+}
+@-webkit-keyframes fadeOutDownBig {
+	0% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-webkit-transform: translateY(2000px);
+	}
+}
+
+@-moz-keyframes fadeOutDownBig {
+	0% {
+		opacity: 1;
+		-moz-transform: translateY(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-moz-transform: translateY(2000px);
+	}
+}
+
+@-ms-keyframes fadeOutDownBig {
+	0% {
+		opacity: 1;
+		-ms-transform: translateY(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-ms-transform: translateY(2000px);
+	}
+}
+
+@-o-keyframes fadeOutDownBig {
+	0% {
+		opacity: 1;
+		-o-transform: translateY(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-o-transform: translateY(2000px);
+	}
+}
+
+@keyframes fadeOutDownBig {
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	
+	100% {
+		opacity: 0;
+		transform: translateY(2000px);
+	}
+}
+
+.fadeOutDownBig {
+	-webkit-animation-name: fadeOutDownBig;
+	-moz-animation-name: fadeOutDownBig;
+	-ms-animation-name: fadeOutDownBig;
+	-o-animation-name: fadeOutDownBig;
+	animation-name: fadeOutDownBig;
+}
+@-webkit-keyframes fadeOutLeftBig {
+	0% {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-webkit-transform: translateX(-2000px);
+	}
+}
+
+@-moz-keyframes fadeOutLeftBig {
+	0% {
+		opacity: 1;
+		-moz-transform: translateX(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-moz-transform: translateX(-2000px);
+	}
+}
+
+@-ms-keyframes fadeOutLeftBig {
+	0% {
+		opacity: 1;
+		-ms-transform: translateX(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-ms-transform: translateX(-2000px);
+	}
+}
+
+@-o-keyframes fadeOutLeftBig {
+	0% {
+		opacity: 1;
+		-o-transform: translateX(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-o-transform: translateX(-2000px);
+	}
+}
+
+@keyframes fadeOutLeftBig {
+	0% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	
+	100% {
+		opacity: 0;
+		transform: translateX(-2000px);
+	}
+}
+
+.fadeOutLeftBig {
+	-webkit-animation-name: fadeOutLeftBig;
+	-moz-animation-name: fadeOutLeftBig;
+	-ms-animation-name: fadeOutLeftBig;
+	-o-animation-name: fadeOutLeftBig;
+	animation-name: fadeOutLeftBig;
+}
+@-webkit-keyframes fadeOutRightBig {
+	0% {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-webkit-transform: translateX(2000px);
+	}
+}
+@-moz-keyframes fadeOutRightBig {
+	0% {
+		opacity: 1;
+		-moz-transform: translateX(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-moz-transform: translateX(2000px);
+	}
+}
+@-ms-keyframes fadeOutRightBig {
+	0% {
+		opacity: 1;
+		-ms-transform: translateX(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-ms-transform: translateX(2000px);
+	}
+}
+@-o-keyframes fadeOutRightBig {
+	0% {
+		opacity: 1;
+		-o-transform: translateX(0);
+	}
+	
+	100% {
+		opacity: 0;
+		-o-transform: translateX(2000px);
+	}
+}
+@keyframes fadeOutRightBig {
+	0% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	
+	100% {
+		opacity: 0;
+		transform: translateX(2000px);
+	}
+}
+
+.fadeOutRightBig {
+	-webkit-animation-name: fadeOutRightBig;
+	-moz-animation-name: fadeOutRightBig;
+	-ms-animation-name: fadeOutRightBig;
+	-o-animation-name: fadeOutRightBig;
+	animation-name: fadeOutRightBig;
+}
+@-webkit-keyframes bounceIn {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(.3);
+	}
+	
+	50% {
+		opacity: 1;
+		-webkit-transform: scale(1.05);
+	}
+	
+	70% {
+		-webkit-transform: scale(.9);
+	}
+	
+	100% {
+		-webkit-transform: scale(1);
+	}
+}
+
+@-moz-keyframes bounceIn {
+	0% {
+		opacity: 0;
+		-moz-transform: scale(.3);
+	}
+	
+	50% {
+		opacity: 1;
+		-moz-transform: scale(1.05);
+	}
+	
+	70% {
+		-moz-transform: scale(.9);
+	}
+	
+	100% {
+		-moz-transform: scale(1);
+	}
+}
+
+@-ms-keyframes bounceIn {
+	0% {
+		opacity: 0;
+		-ms-transform: scale(.3);
+	}
+	
+	50% {
+		opacity: 1;
+		-ms-transform: scale(1.05);
+	}
+	
+	70% {
+		-ms-transform: scale(.9);
+	}
+	
+	100% {
+		-ms-transform: scale(1);
+	}
+}
+
+@-o-keyframes bounceIn {
+	0% {
+		opacity: 0;
+		-o-transform: scale(.3);
+	}
+	
+	50% {
+		opacity: 1;
+		-o-transform: scale(1.05);
+	}
+	
+	70% {
+		-o-transform: scale(.9);
+	}
+	
+	100% {
+		-o-transform: scale(1);
+	}
+}
+
+@keyframes bounceIn {
+	0% {
+		opacity: 0;
+		transform: scale(.3);
+	}
+	
+	50% {
+		opacity: 1;
+		transform: scale(1.05);
+	}
+	
+	70% {
+		transform: scale(.9);
+	}
+	
+	100% {
+		transform: scale(1);
+	}
+}
+
+.bounceIn {
+	-webkit-animation-name: bounceIn;
+	-moz-animation-name: bounceIn;
+	-ms-animation-name: bounceIn;
+	-o-animation-name: bounceIn;
+	animation-name: bounceIn;
+}
+@-webkit-keyframes bounceInUp {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(2000px);
+	}
+	
+	60% {
+		opacity: 1;
+		-webkit-transform: translateY(-30px);
+	}
+	
+	80% {
+		-webkit-transform: translateY(10px);
+	}
+	
+	100% {
+		-webkit-transform: translateY(0);
+	}
+}
+@-moz-keyframes bounceInUp {
+	0% {
+		opacity: 0;
+		-moz-transform: translateY(2000px);
+	}
+	
+	60% {
+		opacity: 1;
+		-moz-transform: translateY(-30px);
+	}
+	
+	80% {
+		-moz-transform: translateY(10px);
+	}
+	
+	100% {
+		-moz-transform: translateY(0);
+	}
+}
+@-ms-keyframes bounceInUp {
+	0% {
+		opacity: 0;
+		-ms-transform: translateY(2000px);
+	}
+	
+	60% {
+		opacity: 1;
+		-ms-transform: translateY(-30px);
+	}
+	
+	80% {
+		-ms-transform: translateY(10px);
+	}
+	
+	100% {
+		-ms-transform: translateY(0);
+	}
+}
+
+@-o-keyframes bounceInUp {
+	0% {
+		opacity: 0;
+		-o-transform: translateY(2000px);
+	}
+	
+	60% {
+		opacity: 1;
+		-o-transform: translateY(-30px);
+	}
+	
+	80% {
+		-o-transform: translateY(10px);
+	}
+	
+	100% {
+		-o-transform: translateY(0);
+	}
+}
+
+@keyframes bounceInUp {
+	0% {
+		opacity: 0;
+		transform: translateY(2000px);
+	}
+	
+	60% {
+		opacity: 1;
+		transform: translateY(-30px);
+	}
+	
+	80% {
+		transform: translateY(10px);
+	}
+	
+	100% {
+		transform: translateY(0);
+	}
+}
+
+.bounceInUp {
+	-webkit-animation-name: bounceInUp;
+	-moz-animation-name: bounceInUp;
+	-ms-animation-name: bounceInUp;
+	-o-animation-name: bounceInUp;
+	animation-name: bounceInUp;
+}
+@-webkit-keyframes bounceInDown {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(-2000px);
+	}
+	
+	60% {
+		opacity: 1;
+		-webkit-transform: translateY(30px);
+	}
+	
+	80% {
+		-webkit-transform: translateY(-10px);
+	}
+	
+	100% {
+		-webkit-transform: translateY(0);
+	}
+}
+
+@-moz-keyframes bounceInDown {
+	0% {
+		opacity: 0;
+		-moz-transform: translateY(-2000px);
+	}
+	
+	60% {
+		opacity: 1;
+		-moz-transform: translateY(30px);
+	}
+	
+	80% {
+		-moz-transform: translateY(-10px);
+	}
+	
+	100% {
+		-moz-transform: translateY(0);
+	}
+}
+
+@-ms-keyframes bounceInDown {
+	0% {
+		opacity: 0;
+		-ms-transform: translateY(-2000px);
+	}
+	
+	60% {
+		opacity: 1;
+		-ms-transform: translateY(30px);
+	}
+	
+	80% {
+		-ms-transform: translateY(-10px);
+	}
+	
+	100% {
+		-ms-transform: translateY(0);
+	}
+}
+
+@-o-keyframes bounceInDown {
+	0% {
+		opacity: 0;
+		-o-transform: translateY(-2000px);
+	}
+	
+	60% {
+		opacity: 1;
+		-o-transform: translateY(30px);
+	}
+	
+	80% {
+		-o-transform: translateY(-10px);
+	}
+	
+	100% {
+		-o-transform: translateY(0);
+	}
+}
+
+@keyframes bounceInDown {
+	0% {
+		opacity: 0;
+		transform: translateY(-2000px);
+	}
+	
+	60% {
+		opacity: 1;
+		transform: translateY(30px);
+	}
+	
+	80% {
+		transform: translateY(-10px);
+	}
+	
+	100% {
+		transform: translateY(0);
+	}
+}
+
+.bounceInDown {
+	-webkit-animation-name: bounceInDown;
+	-moz-animation-name: bounceInDown;
+	-ms-animation-name: bounceInDown;
+	-o-animation-name: bounceInDown;
+	animation-name: bounceInDown;
+}
+@-webkit-keyframes bounceInLeft {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(-2000px);
+	}
+	
+	60% {
+		opacity: 1;
+		-webkit-transform: translateX(30px);
+	}
+	
+	80% {
+		-webkit-transform: translateX(-10px);
+	}
+	
+	100% {
+		-webkit-transform: translateX(0);
+	}
+}
+
+@-moz-keyframes bounceInLeft {
+	0% {
+		opacity: 0;
+		-moz-transform: translateX(-2000px);
+	}
+	
+	60% {
+		opacity: 1;
+		-moz-transform: translateX(30px);
+	}
+	
+	80% {
+		-moz-transform: translateX(-10px);
+	}
+	
+	100% {
+		-moz-transform: translateX(0);
+	}
+}
+
+@-ms-keyframes bounceInLeft {
+	0% {
+		opacity: 0;
+		-ms-transform: translateX(-2000px);
+	}
+	
+	60% {
+		opacity: 1;
+		-ms-transform: translateX(30px);
+	}
+	
+	80% {
+		-ms-transform: translateX(-10px);
+	}
+	
+	100% {
+		-ms-transform: translateX(0);
+	}
+}
+
+@-o-keyframes bounceInLeft {
+	0% {
+		opacity: 0;
+		-o-transform: translateX(-2000px);
+	}
+	
+	60% {
+		opacity: 1;
+		-o-transform: translateX(30px);
+	}
+	
+	80% {
+		-o-transform: translateX(-10px);
+	}
+	
+	100% {
+		-o-transform: translateX(0);
+	}
+}
+
+@keyframes bounceInLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-2000px);
+	}
+	
+	60% {
+		opacity: 1;
+		transform: translateX(30px);
+	}
+	
+	80% {
+		transform: translateX(-10px);
+	}
+	
+	100% {
+		transform: translateX(0);
+	}
+}
+
+.bounceInLeft {
+	-webkit-animation-name: bounceInLeft;
+	-moz-animation-name: bounceInLeft;
+	-ms-animation-name: bounceInLeft;
+	-o-animation-name: bounceInLeft;
+	animation-name: bounceInLeft;
+}
+@-webkit-keyframes bounceInRight {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX(2000px);
+	}
+	
+	60% {
+		opacity: 1;
+		-webkit-transform: translateX(-30px);
+	}
+	
+	80% {
+		-webkit-transform: translateX(10px);
+	}
+	
+	100% {
+		-webkit-transform: translateX(0);
+	}
+}
+
+@-moz-keyframes bounceInRight {
+	0% {
+		opacity: 0;
+		-moz-transform: translateX(2000px);
+	}
+	
+	60% {
+		opacity: 1;
+		-moz-transform: translateX(-30px);
+	}
+	
+	80% {
+		-moz-transform: translateX(10px);
+	}
+	
+	100% {
+		-moz-transform: translateX(0);
+	}
+}
+
+@-ms-keyframes bounceInRight {
+	0% {
+		opacity: 0;
+		-ms-transform: translateX(2000px);
+	}
+	
+	60% {
+		opacity: 1;
+		-ms-transform: translateX(-30px);
+	}
+	
+	80% {
+		-ms-transform: translateX(10px);
+	}
+	
+	100% {
+		-ms-transform: translateX(0);
+	}
+}
+
+@-o-keyframes bounceInRight {
+	0% {
+		opacity: 0;
+		-o-transform: translateX(2000px);
+	}
+	
+	60% {
+		opacity: 1;
+		-o-transform: translateX(-30px);
+	}
+	
+	80% {
+		-o-transform: translateX(10px);
+	}
+	
+	100% {
+		-o-transform: translateX(0);
+	}
+}
+
+@keyframes bounceInRight {
+	0% {
+		opacity: 0;
+		transform: translateX(2000px);
+	}
+	
+	60% {
+		opacity: 1;
+		transform: translateX(-30px);
+	}
+	
+	80% {
+		transform: translateX(10px);
+	}
+	
+	100% {
+		transform: translateX(0);
+	}
+}
+
+.bounceInRight {
+	-webkit-animation-name: bounceInRight;
+	-moz-animation-name: bounceInRight;
+	-ms-animation-name: bounceInRight;
+	-o-animation-name: bounceInRight;
+	animation-name: bounceInRight;
+}
+@-webkit-keyframes bounceOut {
+	0% {
+		-webkit-transform: scale(1);
+	}
+	
+	25% {
+		-webkit-transform: scale(.95);
+	}
+	
+	50% {
+		opacity: 1;
+		-webkit-transform: scale(1.1);
+	}
+	
+	100% {
+		opacity: 0;
+		-webkit-transform: scale(.3);
+	}	
+}
+
+@-moz-keyframes bounceOut {
+	0% {
+		-moz-transform: scale(1);
+	}
+	
+	25% {
+		-moz-transform: scale(.95);
+	}
+	
+	50% {
+		opacity: 1;
+		-moz-transform: scale(1.1);
+	}
+	
+	100% {
+		opacity: 0;
+		-moz-transform: scale(.3);
+	}	
+}
+
+@-ms-keyframes bounceOut {
+	0% {
+		-ms-transform: scale(1);
+	}
+	
+	25% {
+		-ms-transform: scale(.95);
+	}
+	
+	50% {
+		opacity: 1;
+		-ms-transform: scale(1.1);
+	}
+	
+	100% {
+		opacity: 0;
+		-ms-transform: scale(.3);
+	}	
+}
+
+@-o-keyframes bounceOut {
+	0% {
+		-o-transform: scale(1);
+	}
+	
+	25% {
+		-o-transform: scale(.95);
+	}
+	
+	50% {
+		opacity: 1;
+		-o-transform: scale(1.1);
+	}
+	
+	100% {
+		opacity: 0;
+		-o-transform: scale(.3);
+	}	
+}
+
+@keyframes bounceOut {
+	0% {
+		transform: scale(1);
+	}
+	
+	25% {
+		transform: scale(.95);
+	}
+	
+	50% {
+		opacity: 1;
+		transform: scale(1.1);
+	}
+	
+	100% {
+		opacity: 0;
+		transform: scale(.3);
+	}	
+}
+
+.bounceOut {
+	-webkit-animation-name: bounceOut;
+	-moz-animation-name: bounceOut;
+	-ms-animation-name: bounceOut;
+	-o-animation-name: bounceOut;
+	animation-name: bounceOut;
+}
+@-webkit-keyframes bounceOutUp {
+	0% {
+		-webkit-transform: translateY(0);
+	}
+	
+	20% {
+		opacity: 1;
+		-webkit-transform: translateY(20px);
+	}
+	
+	100% {
+		opacity: 0;
+		-webkit-transform: translateY(-2000px);
+	}
+}
+
+@-moz-keyframes bounceOutUp {
+	0% {
+		-moz-transform: translateY(0);
+	}
+	
+	20% {
+		opacity: 1;
+		-moz-transform: translateY(20px);
+	}
+	
+	100% {
+		opacity: 0;
+		-moz-transform: translateY(-2000px);
+	}
+}
+
+@-ms-keyframes bounceOutUp {
+	0% {
+		-ms-transform: translateY(0);
+	}
+	
+	20% {
+		opacity: 1;
+		-ms-transform: translateY(20px);
+	}
+	
+	100% {
+		opacity: 0;
+		-ms-transform: translateY(-2000px);
+	}
+}
+
+@-o-keyframes bounceOutUp {
+	0% {
+		-o-transform: translateY(0);
+	}
+	
+	20% {
+		opacity: 1;
+		-o-transform: translateY(20px);
+	}
+	
+	100% {
+		opacity: 0;
+		-o-transform: translateY(-2000px);
+	}
+}
+
+@keyframes bounceOutUp {
+	0% {
+		transform: translateY(0);
+	}
+	
+	20% {
+		opacity: 1;
+		transform: translateY(20px);
+	}
+	
+	100% {
+		opacity: 0;
+		transform: translateY(-2000px);
+	}
+}
+
+.bounceOutUp {
+	-webkit-animation-name: bounceOutUp;
+	-moz-animation-name: bounceOutUp;
+	-ms-animation-name: bounceOutUp;
+	-o-animation-name: bounceOutUp;
+	animation-name: bounceOutUp;
+}
+@-webkit-keyframes bounceOutDown {
+	0% {
+		-webkit-transform: translateY(0);
+	}
+	
+	20% {
+		opacity: 1;
+		-webkit-transform: translateY(-20px);
+	}
+	
+	100% {
+		opacity: 0;
+		-webkit-transform: translateY(2000px);
+	}
+}
+
+@-moz-keyframes bounceOutDown {
+	0% {
+		-moz-transform: translateY(0);
+	}
+	
+	20% {
+		opacity: 1;
+		-moz-transform: translateY(-20px);
+	}
+	
+	100% {
+		opacity: 0;
+		-moz-transform: translateY(2000px);
+	}
+}
+
+@-ms-keyframes bounceOutDown {
+	0% {
+		-ms-transform: translateY(0);
+	}
+	
+	20% {
+		opacity: 1;
+		-ms-transform: translateY(-20px);
+	}
+	
+	100% {
+		opacity: 0;
+		-ms-transform: translateY(2000px);
+	}
+}
+
+@keyframes bounceOutDown {
+	0% {
+		transform: translateY(0);
+	}
+	
+	20% {
+		opacity: 1;
+		transform: translateY(-20px);
+	}
+	
+	100% {
+		opacity: 0;
+		transform: translateY(2000px);
+	}
+}
+
+.bounceOutDown {
+	-webkit-animation-name: bounceOutDown;
+	-moz-animation-name: bounceOutDown;
+	-ms-animation-name: bounceOutDown;
+	animation-name: bounceOutDown;
+}
+@-webkit-keyframes bounceOutLeft {
+	0% {
+		-webkit-transform: translateX(0);
+	}
+	
+	20% {
+		opacity: 1;
+		-webkit-transform: translateX(20px);
+	}
+	
+	100% {
+		opacity: 0;
+		-webkit-transform: translateX(-2000px);
+	}
+}
+
+@-moz-keyframes bounceOutLeft {
+	0% {
+		-moz-transform: translateX(0);
+	}
+	
+	20% {
+		opacity: 1;
+		-moz-transform: translateX(20px);
+	}
+	
+	100% {
+		opacity: 0;
+		-moz-transform: translateX(-2000px);
+	}
+}
+
+@-ms-keyframes bounceOutLeft {
+	0% {
+		-ms-transform: translateX(0);
+	}
+	
+	20% {
+		opacity: 1;
+		-ms-transform: translateX(20px);
+	}
+	
+	100% {
+		opacity: 0;
+		-ms-transform: translateX(-2000px);
+	}
+}
+
+@-o-keyframes bounceOutLeft {
+	0% {
+		-o-transform: translateX(0);
+	}
+	
+	20% {
+		opacity: 1;
+		-o-transform: translateX(20px);
+	}
+	
+	100% {
+		opacity: 0;
+		-o-transform: translateX(-2000px);
+	}
+}
+
+@keyframes bounceOutLeft {
+	0% {
+		transform: translateX(0);
+	}
+	
+	20% {
+		opacity: 1;
+		transform: translateX(20px);
+	}
+	
+	100% {
+		opacity: 0;
+		transform: translateX(-2000px);
+	}
+}
+
+.bounceOutLeft {
+	-webkit-animation-name: bounceOutLeft;
+	-moz-animation-name: bounceOutLeft;
+	-ms-animation-name: bounceOutLeft;
+	-o-animation-name: bounceOutLeft;
+	animation-name: bounceOutLeft;
+}
+@-webkit-keyframes bounceOutRight {
+	0% {
+		-webkit-transform: translateX(0);
+	}
+	
+	20% {
+		opacity: 1;
+		-webkit-transform: translateX(-20px);
+	}
+	
+	100% {
+		opacity: 0;
+		-webkit-transform: translateX(2000px);
+	}
+}
+
+@-moz-keyframes bounceOutRight {
+	0% {
+		-moz-transform: translateX(0);
+	}
+	
+	20% {
+		opacity: 1;
+		-moz-transform: translateX(-20px);
+	}
+	
+	100% {
+		opacity: 0;
+		-moz-transform: translateX(2000px);
+	}
+}
+
+@-ms-keyframes bounceOutRight {
+	0% {
+		-ms-transform: translateX(0);
+	}
+	
+	20% {
+		opacity: 1;
+		-ms-transform: translateX(-20px);
+	}
+	
+	100% {
+		opacity: 0;
+		-ms-transform: translateX(2000px);
+	}
+}
+
+@-o-keyframes bounceOutRight {
+	0% {
+		-o-transform: translateX(0);
+	}
+	
+	20% {
+		opacity: 1;
+		-o-transform: translateX(-20px);
+	}
+	
+	100% {
+		opacity: 0;
+		-o-transform: translateX(2000px);
+	}
+}
+
+@keyframes bounceOutRight {
+	0% {
+		transform: translateX(0);
+	}
+	
+	20% {
+		opacity: 1;
+		transform: translateX(-20px);
+	}
+	
+	100% {
+		opacity: 0;
+		transform: translateX(2000px);
+	}
+}
+
+.bounceOutRight {
+	-webkit-animation-name: bounceOutRight;
+	-moz-animation-name: bounceOutRight;
+	-ms-animation-name: bounceOutRight;
+	-o-animation-name: bounceOutRight;
+	animation-name: bounceOutRight;
+}
+@-webkit-keyframes rotateIn {
+	0% {
+		-webkit-transform-origin: center center;
+		-webkit-transform: rotate(-200deg);
+		opacity: 0;
+	}
+	
+	100% {
+		-webkit-transform-origin: center center;
+		-webkit-transform: rotate(0);
+		opacity: 1;
+	}
+}
+@-moz-keyframes rotateIn {
+	0% {
+		-moz-transform-origin: center center;
+		-moz-transform: rotate(-200deg);
+		opacity: 0;
+	}
+	
+	100% {
+		-moz-transform-origin: center center;
+		-moz-transform: rotate(0);
+		opacity: 1;
+	}
+}
+@-ms-keyframes rotateIn {
+	0% {
+		-ms-transform-origin: center center;
+		-ms-transform: rotate(-200deg);
+		opacity: 0;
+	}
+	
+	100% {
+		-ms-transform-origin: center center;
+		-ms-transform: rotate(0);
+		opacity: 1;
+	}
+}
+@-o-keyframes rotateIn {
+	0% {
+		-o-transform-origin: center center;
+		-o-transform: rotate(-200deg);
+		opacity: 0;
+	}
+	
+	100% {
+		-o-transform-origin: center center;
+		-o-transform: rotate(0);
+		opacity: 1;
+	}
+}
+@keyframes rotateIn {
+	0% {
+		transform-origin: center center;
+		transform: rotate(-200deg);
+		opacity: 0;
+	}
+	
+	100% {
+		transform-origin: center center;
+		transform: rotate(0);
+		opacity: 1;
+	}
+}
+
+.rotateIn {
+	-webkit-animation-name: rotateIn;
+	-moz-animation-name: rotateIn;
+	-ms-animation-name: rotateIn;
+	-o-animation-name: rotateIn;
+	animation-name: rotateIn;
+}
+@-webkit-keyframes rotateInUpLeft {
+	0% {
+		-webkit-transform-origin: left bottom;
+		-webkit-transform: rotate(90deg);
+		opacity: 0;
+	}
+	
+	100% {
+		-webkit-transform-origin: left bottom;
+		-webkit-transform: rotate(0);
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes rotateInUpLeft {
+	0% {
+		-moz-transform-origin: left bottom;
+		-moz-transform: rotate(90deg);
+		opacity: 0;
+	}
+	
+	100% {
+		-moz-transform-origin: left bottom;
+		-moz-transform: rotate(0);
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes rotateInUpLeft {
+	0% {
+		-ms-transform-origin: left bottom;
+		-ms-transform: rotate(90deg);
+		opacity: 0;
+	}
+	
+	100% {
+		-ms-transform-origin: left bottom;
+		-ms-transform: rotate(0);
+		opacity: 1;
+	}
+}
+
+@-o-keyframes rotateInUpLeft {
+	0% {
+		-o-transform-origin: left bottom;
+		-o-transform: rotate(90deg);
+		opacity: 0;
+	}
+	
+	100% {
+		-o-transform-origin: left bottom;
+		-o-transform: rotate(0);
+		opacity: 1;
+	}
+}
+
+@keyframes rotateInUpLeft {
+	0% {
+		transform-origin: left bottom;
+		transform: rotate(90deg);
+		opacity: 0;
+	}
+	
+	100% {
+		transform-origin: left bottom;
+		transform: rotate(0);
+		opacity: 1;
+	}
+}
+
+.rotateInUpLeft {
+	-webkit-animation-name: rotateInUpLeft;
+	-moz-animation-name: rotateInUpLeft;
+	-ms-animation-name: rotateInUpLeft;
+	-o-animation-name: rotateInUpLeft;
+	animation-name: rotateInUpLeft;
+}
+@-webkit-keyframes rotateInDownLeft {
+	0% {
+		-webkit-transform-origin: left bottom;
+		-webkit-transform: rotate(-90deg);
+		opacity: 0;
+	}
+	
+	100% {
+		-webkit-transform-origin: left bottom;
+		-webkit-transform: rotate(0);
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes rotateInDownLeft {
+	0% {
+		-moz-transform-origin: left bottom;
+		-moz-transform: rotate(-90deg);
+		opacity: 0;
+	}
+	
+	100% {
+		-moz-transform-origin: left bottom;
+		-moz-transform: rotate(0);
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes rotateInDownLeft {
+	0% {
+		-ms-transform-origin: left bottom;
+		-ms-transform: rotate(-90deg);
+		opacity: 0;
+	}
+	
+	100% {
+		-ms-transform-origin: left bottom;
+		-ms-transform: rotate(0);
+		opacity: 1;
+	}
+}
+
+@-o-keyframes rotateInDownLeft {
+	0% {
+		-o-transform-origin: left bottom;
+		-o-transform: rotate(-90deg);
+		opacity: 0;
+	}
+	
+	100% {
+		-o-transform-origin: left bottom;
+		-o-transform: rotate(0);
+		opacity: 1;
+	}
+}
+
+@keyframes rotateInDownLeft {
+	0% {
+		transform-origin: left bottom;
+		transform: rotate(-90deg);
+		opacity: 0;
+	}
+	
+	100% {
+		transform-origin: left bottom;
+		transform: rotate(0);
+		opacity: 1;
+	}
+}
+
+.rotateInDownLeft {
+	-webkit-animation-name: rotateInDownLeft;
+	-moz-animation-name: rotateInDownLeft;
+	-ms-animation-name: rotateInDownLeft;
+	-o-animation-name: rotateInDownLeft;
+	animation-name: rotateInDownLeft;
+}
+@-webkit-keyframes rotateInUpRight {
+	0% {
+		-webkit-transform-origin: right bottom;
+		-webkit-transform: rotate(-90deg);
+		opacity: 0;
+	}
+	
+	100% {
+		-webkit-transform-origin: right bottom;
+		-webkit-transform: rotate(0);
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes rotateInUpRight {
+	0% {
+		-moz-transform-origin: right bottom;
+		-moz-transform: rotate(-90deg);
+		opacity: 0;
+	}
+	
+	100% {
+		-moz-transform-origin: right bottom;
+		-moz-transform: rotate(0);
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes rotateInUpRight {
+	0% {
+		-ms-transform-origin: right bottom;
+		-ms-transform: rotate(-90deg);
+		opacity: 0;
+	}
+	
+	100% {
+		-ms-transform-origin: right bottom;
+		-ms-transform: rotate(0);
+		opacity: 1;
+	}
+}
+
+@-o-keyframes rotateInUpRight {
+	0% {
+		-o-transform-origin: right bottom;
+		-o-transform: rotate(-90deg);
+		opacity: 0;
+	}
+	
+	100% {
+		-o-transform-origin: right bottom;
+		-o-transform: rotate(0);
+		opacity: 1;
+	}
+}
+
+@keyframes rotateInUpRight {
+	0% {
+		transform-origin: right bottom;
+		transform: rotate(-90deg);
+		opacity: 0;
+	}
+	
+	100% {
+		transform-origin: right bottom;
+		transform: rotate(0);
+		opacity: 1;
+	}
+}
+
+.rotateInUpRight {
+	-webkit-animation-name: rotateInUpRight;
+	-moz-animation-name: rotateInUpRight;
+	-ms-animation-name: rotateInUpRight;
+	-o-animation-name: rotateInUpRight;
+	animation-name: rotateInUpRight;
+}
+@-webkit-keyframes rotateInDownRight {
+	0% {
+		-webkit-transform-origin: right bottom;
+		-webkit-transform: rotate(90deg);
+		opacity: 0;
+	}
+	
+	100% {
+		-webkit-transform-origin: right bottom;
+		-webkit-transform: rotate(0);
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes rotateInDownRight {
+	0% {
+		-moz-transform-origin: right bottom;
+		-moz-transform: rotate(90deg);
+		opacity: 0;
+	}
+	
+	100% {
+		-moz-transform-origin: right bottom;
+		-moz-transform: rotate(0);
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes rotateInDownRight {
+	0% {
+		-ms-transform-origin: right bottom;
+		-ms-transform: rotate(90deg);
+		opacity: 0;
+	}
+	
+	100% {
+		-ms-transform-origin: right bottom;
+		-ms-transform: rotate(0);
+		opacity: 1;
+	}
+}
+
+@-o-keyframes rotateInDownRight {
+	0% {
+		-o-transform-origin: right bottom;
+		-o-transform: rotate(90deg);
+		opacity: 0;
+	}
+	
+	100% {
+		-o-transform-origin: right bottom;
+		-o-transform: rotate(0);
+		opacity: 1;
+	}
+}
+
+@keyframes rotateInDownRight {
+	0% {
+		transform-origin: right bottom;
+		transform: rotate(90deg);
+		opacity: 0;
+	}
+	
+	100% {
+		transform-origin: right bottom;
+		transform: rotate(0);
+		opacity: 1;
+	}
+}
+
+.rotateInDownRight {
+	-webkit-animation-name: rotateInDownRight;
+	-moz-animation-name: rotateInDownRight;
+	-ms-animation-name: rotateInDownRight;
+	-o-animation-name: rotateInDownRight;
+	animation-name: rotateInDownRight;
+}
+@-webkit-keyframes rotateOut {
+	0% {
+		-webkit-transform-origin: center center;
+		-webkit-transform: rotate(0);
+		opacity: 1;
+	}
+	
+	100% {
+		-webkit-transform-origin: center center;
+		-webkit-transform: rotate(200deg);
+		opacity: 0;
+	}
+}
+
+@-moz-keyframes rotateOut {
+	0% {
+		-moz-transform-origin: center center;
+		-moz-transform: rotate(0);
+		opacity: 1;
+	}
+	
+	100% {
+		-moz-transform-origin: center center;
+		-moz-transform: rotate(200deg);
+		opacity: 0;
+	}
+}
+
+@-ms-keyframes rotateOut {
+	0% {
+		-ms-transform-origin: center center;
+		-ms-transform: rotate(0);
+		opacity: 1;
+	}
+	
+	100% {
+		-ms-transform-origin: center center;
+		-ms-transform: rotate(200deg);
+		opacity: 0;
+	}
+}
+
+@-o-keyframes rotateOut {
+	0% {
+		-o-transform-origin: center center;
+		-o-transform: rotate(0);
+		opacity: 1;
+	}
+	
+	100% {
+		-o-transform-origin: center center;
+		-o-transform: rotate(200deg);
+		opacity: 0;
+	}
+}
+
+@keyframes rotateOut {
+	0% {
+		transform-origin: center center;
+		transform: rotate(0);
+		opacity: 1;
+	}
+	
+	100% {
+		transform-origin: center center;
+		transform: rotate(200deg);
+		opacity: 0;
+	}
+}
+
+.rotateOut {
+	-webkit-animation-name: rotateOut;
+	-moz-animation-name: rotateOut;
+	-ms-animation-name: rotateOut;
+	-o-animation-name: rotateOut;
+	animation-name: rotateOut;
+}
+@-webkit-keyframes rotateOutUpLeft {
+	0% {
+		-webkit-transform-origin: left bottom;
+		-webkit-transform: rotate(0);
+		opacity: 1;
+	}
+	
+	100% {
+		-webkit-transform-origin: left bottom;
+		-webkit-transform: rotate(-90deg);
+		opacity: 0;
+	}
+}
+
+@-moz-keyframes rotateOutUpLeft {
+	0% {
+		-moz-transform-origin: left bottom;
+		-moz-transform: rotate(0);
+		opacity: 1;
+	}
+	
+	100% {
+		-moz-transform-origin: left bottom;
+		-moz-transform: rotate(-90deg);
+		opacity: 0;
+	}
+}
+
+@-ms-keyframes rotateOutUpLeft {
+	0% {
+		-ms-transform-origin: left bottom;
+		-ms-transform: rotate(0);
+		opacity: 1;
+	}
+	
+	100% {
+		-ms-transform-origin: left bottom;
+		-ms-transform: rotate(-90deg);
+		opacity: 0;
+	}
+}
+
+@-o-keyframes rotateOutUpLeft {
+	0% {
+		-o-transform-origin: left bottom;
+		-o-transform: rotate(0);
+		opacity: 1;
+	}
+	
+	100% {
+		-o-transform-origin: left bottom;
+		-o-transform: rotate(-90deg);
+		opacity: 0;
+	}
+}
+
+@keyframes rotateOutUpLeft {
+	0% {
+		transform-origin: left bottom;
+		transform: rotate(0);
+		opacity: 1;
+	}
+	
+	100% {
+		-transform-origin: left bottom;
+		-transform: rotate(-90deg);
+		opacity: 0;
+	}
+}
+
+.rotateOutUpLeft {
+	-webkit-animation-name: rotateOutUpLeft;
+	-moz-animation-name: rotateOutUpLeft;
+	-ms-animation-name: rotateOutUpLeft;
+	-o-animation-name: rotateOutUpLeft;
+	animation-name: rotateOutUpLeft;
+}
+@-webkit-keyframes rotateOutDownLeft {
+	0% {
+		-webkit-transform-origin: left bottom;
+		-webkit-transform: rotate(0);
+		opacity: 1;
+	}
+	
+	100% {
+		-webkit-transform-origin: left bottom;
+		-webkit-transform: rotate(90deg);
+		opacity: 0;
+	}
+}
+
+@-moz-keyframes rotateOutDownLeft {
+	0% {
+		-moz-transform-origin: left bottom;
+		-moz-transform: rotate(0);
+		opacity: 1;
+	}
+	
+	100% {
+		-moz-transform-origin: left bottom;
+		-moz-transform: rotate(90deg);
+		opacity: 0;
+	}
+}
+
+@-ms-keyframes rotateOutDownLeft {
+	0% {
+		-ms-transform-origin: left bottom;
+		-ms-transform: rotate(0);
+		opacity: 1;
+	}
+	
+	100% {
+		-ms-transform-origin: left bottom;
+		-ms-transform: rotate(90deg);
+		opacity: 0;
+	}
+}
+
+@-o-keyframes rotateOutDownLeft {
+	0% {
+		-o-transform-origin: left bottom;
+		-o-transform: rotate(0);
+		opacity: 1;
+	}
+	
+	100% {
+		-o-transform-origin: left bottom;
+		-o-transform: rotate(90deg);
+		opacity: 0;
+	}
+}
+
+@keyframes rotateOutDownLeft {
+	0% {
+		transform-origin: left bottom;
+		transform: rotate(0);
+		opacity: 1;
+	}
+	
+	100% {
+		transform-origin: left bottom;
+		transform: rotate(90deg);
+		opacity: 0;
+	}
+}
+
+.rotateOutDownLeft {
+	-webkit-animation-name: rotateOutDownLeft;
+	-moz-animation-name: rotateOutDownLeft;
+	-ms-animation-name: rotateOutDownLeft;
+	-o-animation-name: rotateOutDownLeft;
+	animation-name: rotateOutDownLeft;
+}
+@-webkit-keyframes rotateOutUpRight {
+	0% {
+		-webkit-transform-origin: right bottom;
+		-webkit-transform: rotate(0);
+		opacity: 1;
+	}
+	
+	100% {
+		-webkit-transform-origin: right bottom;
+		-webkit-transform: rotate(90deg);
+		opacity: 0;
+	}
+}
+
+@-moz-keyframes rotateOutUpRight {
+	0% {
+		-moz-transform-origin: right bottom;
+		-moz-transform: rotate(0);
+		opacity: 1;
+	}
+	
+	100% {
+		-moz-transform-origin: right bottom;
+		-moz-transform: rotate(90deg);
+		opacity: 0;
+	}
+}
+
+@-ms-keyframes rotateOutUpRight {
+	0% {
+		-ms-transform-origin: right bottom;
+		-ms-transform: rotate(0);
+		opacity: 1;
+	}
+	
+	100% {
+		-ms-transform-origin: right bottom;
+		-ms-transform: rotate(90deg);
+		opacity: 0;
+	}
+}
+
+@-o-keyframes rotateOutUpRight {
+	0% {
+		-o-transform-origin: right bottom;
+		-o-transform: rotate(0);
+		opacity: 1;
+	}
+	
+	100% {
+		-o-transform-origin: right bottom;
+		-o-transform: rotate(90deg);
+		opacity: 0;
+	}
+}
+
+@keyframes rotateOutUpRight {
+	0% {
+		transform-origin: right bottom;
+		transform: rotate(0);
+		opacity: 1;
+	}
+	
+	100% {
+		transform-origin: right bottom;
+		transform: rotate(90deg);
+		opacity: 0;
+	}
+}
+
+.rotateOutUpRight {
+	-webkit-animation-name: rotateOutUpRight;
+	-moz-animation-name: rotateOutUpRight;
+	-ms-animation-name: rotateOutUpRight;
+	-o-animation-name: rotateOutUpRight;
+	animation-name: rotateOutUpRight;
+}
+@-webkit-keyframes rotateOutDownRight {
+	0% {
+		-webkit-transform-origin: right bottom;
+		-webkit-transform: rotate(0);
+		opacity: 1;
+	}
+	
+	100% {
+		-webkit-transform-origin: right bottom;
+		-webkit-transform: rotate(-90deg);
+		opacity: 0;
+	}
+}
+
+@-moz-keyframes rotateOutDownRight {
+	0% {
+		-moz-transform-origin: right bottom;
+		-moz-transform: rotate(0);
+		opacity: 1;
+	}
+	
+	100% {
+		-moz-transform-origin: right bottom;
+		-moz-transform: rotate(-90deg);
+		opacity: 0;
+	}
+}
+
+@-ms-keyframes rotateOutDownRight {
+	0% {
+		-ms-transform-origin: right bottom;
+		-ms-transform: rotate(0);
+		opacity: 1;
+	}
+	
+	100% {
+		-ms-transform-origin: right bottom;
+		-ms-transform: rotate(-90deg);
+		opacity: 0;
+	}
+}
+
+@-o-keyframes rotateOutDownRight {
+	0% {
+		-o-transform-origin: right bottom;
+		-o-transform: rotate(0);
+		opacity: 1;
+	}
+	
+	100% {
+		-o-transform-origin: right bottom;
+		-o-transform: rotate(-90deg);
+		opacity: 0;
+	}
+}
+
+@keyframes rotateOutDownRight {
+	0% {
+		transform-origin: right bottom;
+		transform: rotate(0);
+		opacity: 1;
+	}
+	
+	100% {
+		transform-origin: right bottom;
+		transform: rotate(-90deg);
+		opacity: 0;
+	}
+}
+
+.rotateOutDownRight {
+	-webkit-animation-name: rotateOutDownRight;
+	-moz-animation-name: rotateOutDownRight;
+	-ms-animation-name: rotateOutDownRight;
+	-o-animation-name: rotateOutDownRight;
+	animation-name: rotateOutDownRight;
+}
+@-webkit-keyframes hinge {
+	0% { -webkit-transform: rotate(0); -webkit-transform-origin: top left; -webkit-animation-timing-function: ease-in-out; }	
+	20%, 60% { -webkit-transform: rotate(80deg); -webkit-transform-origin: top left; -webkit-animation-timing-function: ease-in-out; }	
+	40% { -webkit-transform: rotate(60deg); -webkit-transform-origin: top left; -webkit-animation-timing-function: ease-in-out; }	
+	80% { -webkit-transform: rotate(60deg) translateY(0); opacity: 1; -webkit-transform-origin: top left; -webkit-animation-timing-function: ease-in-out; }	
+	100% { -webkit-transform: translateY(700px); opacity: 0; }
+}
+
+@-moz-keyframes hinge {
+	0% { -moz-transform: rotate(0); -moz-transform-origin: top left; -moz-animation-timing-function: ease-in-out; }	
+	20%, 60% { -moz-transform: rotate(80deg); -moz-transform-origin: top left; -moz-animation-timing-function: ease-in-out; }	
+	40% { -moz-transform: rotate(60deg); -moz-transform-origin: top left; -moz-animation-timing-function: ease-in-out; }	
+	80% { -moz-transform: rotate(60deg) translateY(0); opacity: 1; -moz-transform-origin: top left; -moz-animation-timing-function: ease-in-out; }	
+	100% { -moz-transform: translateY(700px); opacity: 0; }
+}
+
+@-ms-keyframes hinge {
+	0% { -ms-transform: rotate(0); -ms-transform-origin: top left; -ms-animation-timing-function: ease-in-out; }	
+	20%, 60% { -ms-transform: rotate(80deg); -ms-transform-origin: top left; -ms-animation-timing-function: ease-in-out; }	
+	40% { -ms-transform: rotate(60deg); -ms-transform-origin: top left; -ms-animation-timing-function: ease-in-out; }	
+	80% { -ms-transform: rotate(60deg) translateY(0); opacity: 1; -ms-transform-origin: top left; -ms-animation-timing-function: ease-in-out; }	
+	100% { -ms-transform: translateY(700px); opacity: 0; }
+}
+
+@-o-keyframes hinge {
+	0% { -o-transform: rotate(0); -o-transform-origin: top left; -o-animation-timing-function: ease-in-out; }	
+	20%, 60% { -o-transform: rotate(80deg); -o-transform-origin: top left; -o-animation-timing-function: ease-in-out; }	
+	40% { -o-transform: rotate(60deg); -o-transform-origin: top left; -o-animation-timing-function: ease-in-out; }	
+	80% { -o-transform: rotate(60deg) translateY(0); opacity: 1; -o-transform-origin: top left; -o-animation-timing-function: ease-in-out; }	
+	100% { -o-transform: translateY(700px); opacity: 0; }
+}
+
+@keyframes hinge {
+	0% { transform: rotate(0); transform-origin: top left; animation-timing-function: ease-in-out; }	
+	20%, 60% { transform: rotate(80deg); transform-origin: top left; animation-timing-function: ease-in-out; }	
+	40% { transform: rotate(60deg); transform-origin: top left; animation-timing-function: ease-in-out; }	
+	80% { transform: rotate(60deg) translateY(0); opacity: 1; transform-origin: top left; animation-timing-function: ease-in-out; }	
+	100% { transform: translateY(700px); opacity: 0; }
+}
+
+.hinge {
+	-webkit-animation-name: hinge;
+	-moz-animation-name: hinge;
+	-ms-animation-name: hinge;
+	-o-animation-name: hinge;
+	animation-name: hinge;
+}
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
+@-webkit-keyframes rollIn {
+	0% { opacity: 0; -webkit-transform: translateX(-100%) rotate(-120deg); }
+	100% { opacity: 1; -webkit-transform: translateX(0px) rotate(0deg); }
+}
+
+@-moz-keyframes rollIn {
+	0% { opacity: 0; -moz-transform: translateX(-100%) rotate(-120deg); }
+	100% { opacity: 1; -moz-transform: translateX(0px) rotate(0deg); }
+}
+
+@-ms-keyframes rollIn {
+	0% { opacity: 0; -ms-transform: translateX(-100%) rotate(-120deg); }
+	100% { opacity: 1; -ms-transform: translateX(0px) rotate(0deg); }
+}
+
+@-o-keyframes rollIn {
+	0% { opacity: 0; -o-transform: translateX(-100%) rotate(-120deg); }
+	100% { opacity: 1; -o-transform: translateX(0px) rotate(0deg); }
+}
+
+@keyframes rollIn {
+	0% { opacity: 0; transform: translateX(-100%) rotate(-120deg); }
+	100% { opacity: 1; transform: translateX(0px) rotate(0deg); }
+}
+
+.rollIn {
+	-webkit-animation-name: rollIn;
+	-moz-animation-name: rollIn;
+	-ms-animation-name: rollIn;
+	-o-animation-name: rollIn;
+	animation-name: rollIn;
+}
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
+@-webkit-keyframes rollOut {
+    0% {
+		opacity: 1;
+		-webkit-transform: translateX(0px) rotate(0deg);
+	}
+
+    100% {
+		opacity: 0;
+		-webkit-transform: translateX(100%) rotate(120deg);
+	}
+}
+
+@-moz-keyframes rollOut {
+    0% {
+		opacity: 1;
+		-moz-transform: translateX(0px) rotate(0deg);
+	}
+
+    100% {
+		opacity: 0;
+		-moz-transform: translateX(100%) rotate(120deg);
+	}
+}
+
+@-ms-keyframes rollOut {
+    0% {
+		opacity: 1;
+		-ms-transform: translateX(0px) rotate(0deg);
+	}
+
+    100% {
+		opacity: 0;
+		-ms-transform: translateX(100%) rotate(120deg);
+	}
+}
+
+@-o-keyframes rollOut {
+    0% {
+		opacity: 1;
+		-o-transform: translateX(0px) rotate(0deg);
+	}
+
+    100% {
+		opacity: 0;
+		-o-transform: translateX(100%) rotate(120deg);
+	}
+}
+
+@keyframes rollOut {
+    0% {
+		opacity: 1;
+		transform: translateX(0px) rotate(0deg);
+	}
+
+    100% {
+		opacity: 0;
+		transform: translateX(100%) rotate(120deg);
+	}
+}
+
+.rollOut {
+	-webkit-animation-name: rollOut;
+	-moz-animation-name: rollOut;
+	-ms-animation-name: rollOut;
+	-o-animation-name: rollOut;
+	animation-name: rollOut;
+}
+
+
+
+
+
+
+/* extended by Codrops */
+
+@-webkit-keyframes scaleOut {
+	0% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: scale(.5);
+	}	
+}
+
+@-moz-keyframes scaleOut {
+	0% {
+		opacity: 1;
+		-moz-transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		-moz-transform: scale(.5);
+	}	
+}
+
+@-ms-keyframes scaleOut {
+	0% {
+		opacity: 1;
+		-ms-transform: scale(1);
+	}100% {
+		opacity: 0;
+		-ms-transform: scale(.5);
+	}	
+}
+
+@-o-keyframes scaleOut {
+	0% {
+		opacity: 1;
+		-o-transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		-o-transform: scale(.5);
+	}	
+}
+
+@keyframes scaleOut {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(.5);
+	}	
+}
+
+.scaleOut {
+	-webkit-animation-name: scaleOut;
+	-moz-animation-name: scaleOut;
+	-ms-animation-name: scaleOut;
+	-o-animation-name: scaleOut;
+	animation-name: scaleOut;
+}
+
+@-webkit-keyframes scaleIn {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(.5);
+	}	
+	100% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+	}
+}
+
+@-moz-keyframes scaleIn {
+	0% {
+		opacity: 0;
+		-moz-transform: scale(.5);
+	}
+	100% {
+		opacity: 1;
+		-moz-transform: scale(1);
+	}
+}
+
+@-ms-keyframes scaleIn {
+	0% {
+		opacity: 0;
+		-ms-transform: scale(.5);
+	}
+	100% {
+		opacity: 1;
+		-ms-transform: scale(1);
+	}
+}
+
+@-o-keyframes scaleIn {
+	0% {
+		opacity: 0;
+		-o-transform: scale(.5);
+	}
+	100% {
+		opacity: 1;
+		-o-transform: scale(1);
+	}
+}
+
+@keyframes scaleIn {
+	0% {
+		opacity: 0;
+		transform: scale(.5);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.scaleIn {
+	-webkit-animation-name: scaleIn;
+	-moz-animation-name: scaleIn;
+	-ms-animation-name: scaleIn;
+	-o-animation-name: scaleIn;
+	animation-name: scaleIn;
+}
+
+    </style>
+    <body>
+        <div class="container">
+           
+            <header>
+				<br><br><br>
+					<% if(typeof message !== 'undefined') { %>
+						<div class="alert">
+								<h1 style="color:red;"><%= message %></h1>
+							</div>
+						<% }else{ %>
+                <h1>Student Login and Registration Form</h1>
+				<% } %>
+            </header>
+            <section>				
+                <div id="container_demo" >
+                    <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+                    <a class="hiddenanchor" id="toregister"></a>
+                    <a class="hiddenanchor" id="tologin"></a>
+                    <div id="wrapper">
+                        <div id="login" class="animate form">
+							<div> 
+								<form action="/login" method="POST">
+									<h1>Log in</h1> 
+									<fieldset class="form-group">
+												<label for="gname">Email</label>
+										<input  name="Email" class="form-control" type="email" placeholder="Enter you Email" required>
+									 </fieldset>
+								<fieldset class="form-group">
+									<label for="edesc">Password:</label><br>
+									<input type="password" class="form-control" name="Password" placeholder="Enter Your Password" required>
+								</fieldset>
+								
+										<div class="modal-footer d-flex justify-content-center">
+											<button type="submit" class="btn btn-primary">Submit</button>
+											</div>
+										</form>
+											<a id="pass" style="cursor:pointer">Forgot Password?</a>
+											<div id="divpass" style="display:none;">
+													<form action="/reset" method="POST">
+													  <input type="email" class="form-control" name="Email" placeholder="Enter Your Email" required>
+														 <input type="submit" class="btn btn-primary value="Send Mail">
+													 </form>
+												 </div>
+										</div>
+										<p class="change_link">
+												Not a member yet ?
+												<a href="#toregister" class="to_register">Join us</a>
+											</p>
+												<br> <br>
+											
+											
+										</div>
+                        
+
+                        <div id="register" class="animate form">
+								<form role="form" method="POST" action="/register" enctype="multipart/form-data">
+									<h1> Sign up </h1>
+									<div class="form-group">
+										<input type="text" class="form-control" name="Name" value="" placeholder="Name" required>
+									</div>
+									<div class="form-group">
+										<label>Profile Image:</label>
+										<small>For best upload <strong> 75 X 75 </strong>Dimensions image</small>
+											<input type="file" class="form-control" name="ProfileImage"  required>
+										</div>
+										<div class="form-group">
+											<select name="Gender" class="form-control input-lg">
+												<option value="">Select Your Gender</option>
+												<option value="Male">Male</option>
+												<option value="Female">Female</option>
+											</select>
+											</div>
+									<div class="form-group">
+										<input type="email" class="form-control"  name="Email" value="" placeholder="Email Address" required>
+									</div>
+									<div class="form-group">
+										<input type="password" class="form-control" id="password"  name="Password" value=""placeholder="Password" required>
+									</div>
+									<div class="form-group">
+										<input type="password" class="form-control"  id="cpassword" name="CPassword" value="" placeholder="confirm Password" required>
+									</div>
+									<div id="show" style="color:red;display:none">
+											<small id="show">Password Does Not Match</small>
+									</div>
+									<div class="form-group">
+										<input type="number" class="form-control"  name="Phone" value="" placeholder="+91 Your 10 Digit Phone Number" required>
+									</div>
+									<div class="form-group">
+										<input type="text" placeholder="Enter Your Country" name="Location" class="form-control" >
+									</div>
+                            <div class="form-group">
+						  <label for="sel2"></label>
+						  <select class="form-control input-lg" name="City" id="sel2" required>
+						  <option value="">Select city</option>
+						  <option value="Adilabad"> Adilabad</option>
+						<option value="Agra">Agra</option>
+						 <option value="Ahmedabad">Ahmedabad</option>
+						<option value="Ahmednagar">Ahmednagar</option>
+						<option value="Aizawl">Aizawl</option>
+						<option value="Ajitgarh (Mohali)">Ajitgarh (Mohali)</option>
+						<option value="Ajmer">Ajmer</option>
+						<option value="Akola">Akola</option>
+						<option value="Alappuzha">Alappuzha</option>
+						 <option value="Aligarh">Aligarh</option>
+						<option value="Alirajpur">Alirajpur</option>
+						 <option value="Allahabad">Allahabad</option>
+						<option value="Almora">Almora</option>
+						 <option value="Alwar">Alwar</option>
+						<option value="Ambala">Ambala</option>
+						 <option value="Ambedkar Nagar">Ambedkar Nagar</option>
+						<option value="Amravati"> Amravati</option>
+						  <option value="Amreli district"> Amreli district</option>
+						  <option value="Amritsar"> Amritsar</option>
+						  <option value="Anand"> Anand</option>
+						  <option value="Anantapur"> Anantapur</option>
+						  <option value="Anantnag"> Anantnag</option>
+						  <option value="Angul">Angul</option>
+						  <option value="Anjaw"> Anjaw</option>
+						  <option value="Anuppur"> Anuppur</option>
+						  <option value="Araria"> Araria</option>
+						  <option value="Ariyalur"> Ariyalur</option>
+						  <option value="Arwal"> Arwal</option>
+						  <option value="Ashok Nagar"> Ashok Nagar</option>
+						  <option value="Auraiya"> Auraiya</option>
+						  <option value="Aurangabad"> Aurangabad</option>
+						  <option value="A<a id="pass" >Forgot Password?</a>urangabad"> Aurangabad</option>
+						  <option value="Azamgarh"> Azamgarh</option>
+						  <option value="Badgam"> Badgam</option>
+						  <option value="Bagalkot">  Bagalkot</option>
+						  <option value="Bageshwar">  Bageshwar</option>
+						  <option value="Bagpat">  Bagpat</option>
+						  <option value="Bahraich">  Bahraich</option>
+						  <option value="Baksa">  Baksa</option>
+						  <option value="Balaghat">  Balaghat</option>
+						  <option value="Balangir">  Balangir</option>
+						  <option value="Balasore">  Balasore</option>
+						  <option value="Ballia">  Ballia</option>
+						  <option value="Balrampur">  Balrampur</option>
+						  <option value="Banaskantha">  Banaskantha</option>
+						  <option value="Banda"> Banda</option>
+						  <option value="Bandipora"> Bandipora</option>
+						  <option value="Bangalore Rural"> Bangalore Rural</option>
+						  <option value="Bangalore Urban">  Bangalore Urban</option>
+						  <option value="Banka">  Banka</option>
+						  <option value="Bankura">  Bankura</option>
+						  <option value="Banswara">  Banswara</option>
+						  <option value="Barabanki">  Barabanki</option>
+						  <option value="Baramulla">  Baramulla</option>
+						  <option value="Baran"> Baran</option>
+						  <option value="Bardhaman">Bardhaman</option>
+						  <option value="Bareilly"> Bareilly</option>
+						  <option value="Bargarh (Baragarh)">  Bargarh (Baragarh)</option>
+						  <option value="Barmer">  Barmer</option>
+						  <option value="Barnala"> Barnala</option>
+						  <option value="Barpeta">  Barpeta</option>
+						  <option value="Barwani">  Barwani</option>
+						  <option value="Bastar">  Bastar</option>
+						  <option value="Basti">  Basti</option>
+						  <option value="Bathinda">  Bathinda</option>
+						  <option value="Beed">  Beed</option>
+						  <option value="Begusarai"> Begusarai</option>
+						  <option value="Belgaum"> Belgaum</option>
+						  <option value="Bellary"> Bellary</option>
+						  <option value="Betul"> Betul</option>
+						  <option value="Bhadrak"> Bhadrak</option>
+						  <option value="Bhagalpur"> Bhagalpur</option>
+						  <option value="Bhandara"> Bhandara</option>
+						  <option value="Bharatpur"> Bharatpur</option>
+						  <option value="Bharuch"> Bharuch</option>
+						  <option value="Bhavnagar"> Bhavnagar</option>
+						  <option value="Bhilwara"> Bhilwara</option>
+						  <option value="Bhind"> Bhind</option>
+						  <option value="Bhiwani"> Bhiwani</option>
+						  <option value="Bhojpur"> Bhojpur</option>
+						  <option value="Bhopal"> Bhopal</option>
+						  <option value="Bidar"> Bidar</option>
+						  <option value="Bijapur"> Bijapur</option>
+						  <option value="Bijapur"> Bijapur</option>
+						  <option value="Bijnor"> Bijnor</option>
+						  <option value="Bikaner"> Bikaner</option>
+						  <option value="Bilaspur"> Bilaspur</option>
+						  <option value="Bilaspur"> Bilaspur</option>
+						  <option value="Birbhum">  Birbhum</option>
+						  <option value="Bishnupur">  Bishnupur</option>
+						  <option value="Bokaro">  Bokaro</option>
+						  <option value="Bongaigaon">  Bongaigaon</option>
+						  <option value="Boudh (Bauda)">  Boudh (Bauda)</option>
+						  <option value="Budaun">  Budaun</option>
+						  <option value="Bulandshahr">  Bulandshahr</option>
+						  <option value="Buldhana"> Buldhana</option>
+						  <option value="Bundi"> Bundi</option>
+						  <option value="Burhanpur"> Burhanpur</option>
+						  <option value="Buxar"> Buxar</option>
+						  <option value="Cachar"> Cachar</option>
+						  <option value="Central Delhi"> Central Delhi</option>
+						  <option value="Chamarajnagar"> Chamarajnagar</option>
+						  <option value="Chamba"> Chamba</option>
+						  <option value="Chamoli"> Chamoli</option>
+						  <option value="Champawat"> Champawat</option>
+						  <option value="Champhai"> Champhai</option>
+						  <option value="Chandauli"> Chandauli</option>
+						  <option value="Chandel"> Chandel</option>
+						  <option value="Chandigarh"> Chandigarh</option>
+						  <option value="Chandrapur"> Chandrapur</option>
+						  <option value="Changlang"> Changlang</option>
+						  <option value="Chatra"> Chatra</option>
+						  <option value="Chennai"> Chennai</option>
+						  <option value="Chhatarpur"> Chhatarpur</option>
+						  <option value="Chhatrapati Shahuji Maharaj Nagar"> Chhatrapati Shahuji Maharaj Nagar</option>
+						  <option value="Chhindwara">Chhindwara</option>
+						  <option value="Chikkaballapur"> Chikkaballapur</option>
+						  <option value="Chikkamagaluru">  Chikkamagaluru</option>
+						  <option value="Chirang"> Chirang</option>
+						  <option value="Chitradurga"> Chitradurga</option>
+						  <option value="Chitrakoot"> Chitrakoot</option>
+						  <option value="Chittoor"> Chittoor</option>
+						  <option value="Chittorgarh"> Chittorgarh</option>
+						  <option value="Churachandpur"> Churachandpur</option>
+						  <option value="Churu"> Churu</option>
+						  <option value="Coimbatore"> Coimbatore</option>
+						  <option value="Cooch Behar"> Cooch Behar</option>
+						  <option value="Cuddalore"> Cuddalore</option>
+						  <option value="Cuttack">  Cuttack</option>
+						  <option value="Dadra and Nagar Haveli">  Dadra and Nagar Haveli</option>
+						  <option value="Dahod">  Dahod</option>
+						  <option value="Dakshin Dinajpur">  Dakshin Dinajpur</option>
+						  <option value="Dakshina Kannada">  Dakshina Kannada</option>
+						  <option value="Daman">  Daman</option>
+						  <option value="Damoh">  Damoh</option>
+						  <option value="Dantewada">  Dantewada</option>
+						  <option value="Darbhanga"> Darbhanga</option>
+						  <option value="Darjeeling"> Darjeeling</option>
+						  <option value="Darrang"> Darrang</option>
+						  <option value="Datia"> Datia</option>
+						  <option value="Dausa"> Dausa</option>
+						  <option value="Davanagere"> Davanagere</option>
+						  <option value="Debagarh (Deogarh)"> Debagarh (Deogarh)</option>
+						  <option value="Dehradun"> Dehradun</option>
+						  <option value="Deoghar"> Deoghar</option>
+						  <option value="Deoria"> Deoria</option>
+						  <option value="Dewas"> Dewas</option>
+						  <option value="Dhalai"> Dhalai</option>
+						  <option value="Dhamtari"> Dhamtari</option>
+						  <option value="Dhanbad"> Dhanbad</option>
+						  <option value="Dhar"> Dhar</option>
+						  <option value="Dharmapuri"> Dharmapuri</option>
+						  <option value="Dharwad"> Dharwad</option>
+						  <option value="Dhemaji"> Dhemaji</option>
+						  <option value="Dhenkanal"> Dhenkanal</option>
+						  <option value="Dholpur"> Dholpur</option>
+						  <option value="Dhubri"> Dhubri</option>
+						  <option value="Dhule"> Dhule</option>
+						  <option value="Dibang Valley"> Dibang Valley</option>
+						  <option value="Dibrugarh"> Dibrugarh</option>
+						  <option value="Dima Hasao"> Dima Hasao</option>
+						  <option value="Dimapur"> Dimapur</option>
+						  <option value="Dindigul"> Dindigul</option>
+						  <option value="Dindori"> Dindori</option>
+						  <option value="Diu"> Diu</option>
+						  <option value="Doda"> Doda</option>
+						  <option value="Dumka"> Dumka</option>
+						  <option value="Dungapur"> Dungapur</option>
+						  <option value="Durg"> Durg</option>
+						  <option value="East Champaran"> East Champaran</option>
+						  <option value="East Delhi"> East Delhi</option>
+						  <option value="East Garo Hills"> East Garo Hills</option>
+						  <option value="East Khasi Hills">  East Khasi Hills</option>
+						  <option value="East Siang"> East Siang</option>
+						  <option value="East Sikkim"> East Sikkim</option>
+						  <option value="East Singhbhum"> East Singhbhum</option>
+						  <option value=" Eluru"> Eluru</option>
+						  <option value="Ernakulam"> Ernakulam</option>
+						  <option value="Erode"> Erode</option>
+						  <option value="Etah"> Etah</option>
+						  <option value="Etawah"> Etawah</option>
+						  <option value="Faizabad"> Faizabad</option>
+						  <option value="Faridabad"> Faridabad</option>
+						  <option value="Faridkot"> Faridkot</option>
+						  <option value="Farrukhabad"> Farrukhabad</option>
+						  <option value="Fatehabad"> Fatehabad</option>
+						  <option value="Fatehgarh Sahib"> Fatehgarh Sahib</option>
+						  <option value="Fatehpur"> Fatehpur</option>
+						  <option value="Fazilka"> Fazilka</option>
+						  <option value="Firozabad"> Firozabad</option>/dashboard
+						  <option value="Firozpur"> Firozpur</option>
+						  <option value="Gadag"> Gadag</option>
+						  <option value="Gadchiroli"> Gadchiroli</option>
+						  <option value="Gajapati"> Gajapati</option>
+						  <option value="Ganderbal"> Ganderbal</option>
+						  <option value="Gandhinagar"> Gandhinagar</option>
+						  <option value="Ganganagar"> Ganganagar</option>
+						  <option value="Ganjam"> Ganjam</option>
+						  <option value="Garhwa"> Garhwa</option>
+						  <option value="Gautam Buddh Nagar"> Gautam Buddh Nagar</option>
+						  <option value="Gaya"> Gaya</option>
+						  <option value="Ghaziabad"> Ghaziabad</option>
+						  <option value="Ghazipur"> Ghazipur</option>
+						  <option value="Giridih"> Giridih</option>
+						  <option value="Goalpara"> Goalpara</option>
+						  <option value="Godda"> Godda</option>
+						  <option value="Golaghat"> Golaghat</option>
+						  <option value="Gonda"> Gonda</option>
+						  <option value="Gondia"> Gondia</option>
+						  <option value="Gopalganj"> Gopalganj</option>
+						  <option value="Gorakhpur"> Gorakhpur</option>
+						  <option value="Gulbarga"> Gulbarga</option>
+						  <option value="Gumla"> Gumla</option>
+						  <option value="Guna"> Guna</option>
+						  <option value="Guntur"> Guntur</option>
+						  <option value="Gurdaspur"> Gurdaspur</option>
+						  <option value="Gurgaon"> Gurgaon</option>
+						  <option value="Gwalior"> Gwalior</option>
+						  <option value="Hailakandi">  Hailakandi</option>
+						  <option value="Hamirpur"> Hamirpur</option>
+						  <option value="Hamirpur"> Hamirpur</option>
+						  <option value="Hanumangarh"> Hanumangarh</option>
+						  <option value="Harda"> Harda</option>
+						  <option value="Hardoi"> Hardoi</option>
+						  <option value="Haridwar">  Haridwar</option>
+						  <option value="Hassan">  Hassan</option>
+						  <option value="Haveri district">  Haveri district</option>
+						  <option value="Hazaribag">  Hazaribag</option>
+						  <option value="Hingoli">  Hingoli</option>
+						  <option value="Hissar">  Hissar</option>
+						  <option value="Hooghly"> Hooghly</option>
+						  <option value="Hoshangabad">  Hoshangabad</option>
+						  <option value="Hoshiarpur">  Hoshiarpur</option>
+						  <option value="Howrah"> Howrah</option>
+						  <option value="Hyderabad">  Hyderabad</option>
+						  <option value="Hyderabad">  Hyderabad</option>
+						  <option value="Idukki">  Idukki</option>
+						  <option value="Imphal East"> Imphal East</option>
+						  <option value="Imphal West"> Imphal West</option>
+						  <option value="Indore"> Indore</option>
+						  <option value="Jabalpur">  Jabalpur</option>
+						  <option value="Jagatsinghpur">  Jagatsinghpur</option>
+						  <option value="Jaintia Hills">  Jaintia Hills</option>
+						  <option value="Jaipur">  Jaipur</option>
+						  <option value="Jaisalmer"> Jaisalmer</option>
+						  <option value="Jajpur"> Jajpur</option>
+						  <option value="Jalandhar"> Jalandhar</option>
+						  <option value="Jalaun"> Jalaun</option>
+						  <option value="Jalgaon"> Jalgaon</option>
+						  <option value="Jalna"> Jalna</option>
+						  <option value="Jalore">  Jalore</option>
+						  <option value="Jalpaiguri">  Jalpaiguri</option>
+						  <option value="Jammu">  Jammu</option>
+						  <option value="Jamnagar">  Jamnagar</option>
+						  <option value="Jamtara">  Jamtara</option>
+						  <option value="Jamui">  Jamui</option>
+						  <option value="Janjgir-Champa">  Janjgir-Champa</option>
+						  <option value="Jashpur">  Jashpur</option>
+						  <option value="Jaunpur district">  Jaunpur district</option>
+						  <option value="Jehanabad">  Jehanabad</option>
+						  <option value="Jhabua">  Jhabua</option>
+						  <option value="Jhajjar">  Jhajjar</option>
+						  <option value="Jhalawar">  Jhalawar</option>
+						  <option value="Jhansi">  Jhansi</option>
+						  <option value="Jharsuguda"> Jharsuguda</option>
+						  <option value="Jhunjhunu">Jhunjhunu</option>
+						  <option value="Jind"> Jind</option>
+						  <option value="Jodhpur"> Jodhpur</option>
+						  <option value="Jorhat"> Jorhat</option>
+						  <option value="Junagadh"> Junagadh</option>
+						  <option value="Jyotiba Phule Nagar"> Jyotiba Phule Nagar</option>
+						  <option value="Kabirdham (formerly Kawardha)"> Kabirdham (formerly Kawardha)</option>
+						  <option value="Kadapa"> Kadapa</option>
+						  <option value="Kaimur"> Kaimur</option>
+						  <option value="Kaithal">  Kaithal</option>
+						  <option value="Kakinada">  Kakinada</option>
+						  <option value="Kalahandi">  Kalahandi</option>
+						  <option value="Kamrup"> Kamrup</option>
+						  <option value="Kamrup Metropolitan"> Kamrup Metropolitan</option>
+						  <option value="Kanchipuram"> Kanchipuram</option>
+						  <option value="Kandhamal"> Kandhamal</option>
+						  <option value="Kangra"> Kangra</option>
+						  <option value="Kanker"> Kanker</option>
+						  <option value="Kannauj"> Kannauj</option>
+						  <option value="Kannur"> Kannur</option>
+						  <option value="Kanpur">  Kanpur</option>
+						  <option value="Kanshi Ram Nagar">  Kanshi Ram Nagar</option>
+						  <option value="Kanyakumari">  Kanyakumari</option>
+						  <option value="Kapurthala">  Kapurthala</option>
+						  <option value="Karaikal">  Karaikal</option>
+						  <option value="Karauli">  Karauli</option>
+						  <option value="Karbi Anglong">  Karbi Anglong</option>
+						  <option value="Kargil">  Kargil</option>
+						  <option value="Karimganj">  Karimganj</option>
+						  <option value="Karimnagar"> Karimnagar</option>
+						  <option value="Karnal"> Karnal</option>
+						  <option value="Karur">Karur</option>
+						  <option value="Kasaragod">Kasaragod</option>
+						  <option value="Kathua"> Kathua</option>
+						  <option value="Katihar"> Katihar</option>
+						  <option value=" Katni"> Katni</option>
+						  <option value="Kaushambi"> Kaushambi</option>
+						  <option value="Kendrapara"> Kendrapara</option>
+						  <option value="Kendujhar (Keonjhar)"> Kendujhar (Keonjhar)</option>
+						  <option value="Khagaria"> Khagaria</option>
+						  <option value="Khammam"> Khammam</option>
+						  <option value="Khandwa (East Nimar)"> Khandwa (East Nimar)</option>
+						  <option value=" Khargone (West Nimar)"> Khargone (West Nimar)</option>
+						  <option value="Kheda"> Kheda</option>
+						  <option value="Khordha"> Khordha</option>
+						  <option value="Khowai"> Khowai</option>
+						  <option value="Khunti"> Khunti</option>
+						  <option value="Kinnaur"> Kinnaur</option>
+						  <option value="Kishanganj"> Kishanganj</option>
+						  <option value="Kishtwar">  Kishtwar</option>
+						  <option value="Kodagu">  Kodagu</option>
+						  <option value="Koderma">  Koderma</option>
+						  <option value="Kohima">  Kohima</option>
+						  <option value="Kokrajhar">  Kokrajhar</option>
+						  <option value="Kolar">  Kolar</option>
+						  <option value="Kolasib"> Kolasib</option>
+						  <option value="Kolhapur"> Kolhapur</option>
+						  <option value="Kolkata"> Kolkata</option>
+						  <option value="Kollam"> Kollam</option>
+						  <option value="Koppal"> Koppal</option>
+						  <option value="Koraput"> Koraput</option>
+						  <option value="Korba"> Korba</option>
+						  <option value="Koriya"> Koriya</option>
+						  <option value="Kota"> Kota</option>
+						  <option value="Kottayam"> Kottayam</option>
+						  <option value="Kozhikode"> Kozhikode</option>
+						  <option value="Krishna"> Krishna</option>
+						  <option value="Kulgam"> Kulgam</option>
+						  <option value="Kullu"> Kullu</option>
+						  <option value="Kupwara"> Kupwara</option>
+						  <option value="Kurnool"> Kurnool</option>
+						  <option value="Kurukshetra"> Kurukshetra</option>
+						  <option value="Kurung Kumey"> Kurung Kumey</option>
+						  <option value="Kushinagar"> Kushinagar</option>
+						  <option value="Kutch">  Kutch</option>
+						  <option value="Lahaul and Spiti"> Lahaul and Spiti</option>
+						  <option value="Lakhimpur"> Lakhimpur</option>
+						  <option value="Lakhimpur Kheri"> Lakhimpur Kheri</option>
+						  <option value="Lakhisarai"> Lakhisarai</option>
+						  <option value="Lalitpur"> Lalitpur</option>
+						  <option value="Latehar"> Latehar</option>
+						  <option value="Latur"> Latur</option>
+						  <option value="Lawngtlai"> Lawngtlai</option>
+						  <option value="Leh"> Leh</option>
+						  <option value="Lohardaga"> Lohardaga</option>
+						  <option value="Lohit"> Lohit</option>
+						  <option value="Lower Dibang Valley"> Lower Dibang Valley</option>
+						  <option value="Lower Subansiri"> Lower Subansiri</option>
+						  <option value="Lucknow"> Lucknow</option>
+						  <option value="Ludhiana">  Ludhiana</option>
+						  <option value="Lunglei">  Lunglei</option>
+						  <option value="Madhepura">  Madhepura</option>
+						  <option value="Madhubani"> Madhubani</option>
+						  <option value="Madurai"> Madurai</option>
+						  <option value="Mahamaya Nagar">  Mahamaya Nagar</option>
+						  <option value="Maharajganj"> Maharajganj</option>
+						  <option value="Mahasamund"> Mahasamund</option>
+						  <option value="Mahbubnagar">  Mahbubnagar</option>
+						  <option value="Mahe">  Mahe</option>
+						  <option value="Mahendragarh"> Mahendragarh</option>
+						  <option value="Mahoba">  Mahoba</option>
+						  <option value="Mainpuri">  Mainpuri</option>
+						  <option value="Malappuram">  Malappuram</option>
+						  <option value="Maldah">  Maldah</option>
+						  <option value="Malkangiri">  Malkangiri</option>
+						  <option value="Mamit">  Mamit</option>
+						  <option value="Mandi">  Mandi</option>
+						  <option value="Mandla">  Mandla</option>
+						  <option value="Mandsaur"> Mandsaur</option>
+						  <option value="Mandya"> Mandya</option>
+						  <option value="Mansa"> Mansa</option>
+						  <option value="Marigaon">  Marigaon</option>
+						  <option value="Mathura">  Mathura</option>
+						  <option value="Mau">  Mau</option>
+						  <option value="Mayurbhanj">  Mayurbhanj</option>
+						  <option value="Medak"> Medak</option>
+						  <option value="Meerut"> Meerut</option>
+						  <option value="Mehsana"> Mehsana</option>
+						  <option value="Mewat"> Mewat</option>
+						  <option value="Mirzapur"> Mirzapur</option>
+						  <option value="Moga"> Moga</option>
+						  <option value="Mokokchung"> Mokokchung</option>
+						  <option value="Mon"> Mon</option>
+						  <option value="Moradabad"> Moradabad</option>
+						 <option value="Morena"> Morena</option>
+						  <option value="Mumbai City"> Mumbai City</option>
+						  <option value="Mumbai suburban"> Mumbai suburban</option>
+						  <option value="Munger"> Munger</option>
+						  <option value="Murshidabad"> Murshidabad</option>
+						  <option value="Muzaffarnagar"> Muzaffarnagar</option>
+						  <option value="Muzaffarpur"> Muzaffarpur</option>
+						  <option value="Mysore"> Mysore</option>
+						  <option value="Nabarangpur"> Nabarangpur</option>
+						  <option value="Nadia"> Nadia</option>
+						  <option value="Nagaon"> Nagaon</option>
+						  <option value="Nagapattinam"> Nagapattinam</option>
+						  <option value="Nagaur"> Nagaur</option>
+						  <option value="Nagpur"> Nagpur</option>
+						  <option value="Nainital"> Nainital</option>
+						  <option value="Nalanda">  Nalanda</option>
+						  <option value="Nalbari">  Nalbari</option>
+						  <option value="Nalgonda">  Nalgonda</option>
+						  <option value="Namakkal">  Namakkal</option>
+						  <option value="Nanded"> Nanded</option>
+						  <option value="Nandurbar"> Nandurbar</option>
+						  <option value="Narayanpur">  Narayanpur</option>
+						  <option value="Narmada">  Narmada</option>
+						  <option value="Narsinghpur">  Narsinghpur</option>
+						  <option value="Nashik">  Nashik</option>
+						  <option value="Navsari">  Navsari</option>
+						  <option value="Nawada">  Nawada</option>
+						  <option value="Nawanshahr">  Nawanshahr</option>
+						  <option value="Nayagarh">  Nayagarh</option>
+						  <option value="Neemuch"> Neemuch</option>
+						  <option value="Nellore"> Nellore</option>
+						  <option value="New Delhi"> New Delhi</option>
+						  <option value="Nilgiris"> Nilgiris</option>
+						  <option value="Nizamabad"> Nizamabad</option>
+						  <option value="North"> North 24 Parganas</option>
+						  <option value="North Delhi"> North Delhi</option>
+						  <option value="North East Delhi"> North East Delhi</option>
+						  <option value="North Goa"> North Goa</option>
+						  <option value="North Sikkim"> North Sikkim</option>
+						  <option value="North Tripura"> North Tripura</option>
+						  <option value="North West Delhi"> North West Delhi</option>
+						  <option value="Nuapada"> Nuapada</option>
+						  <option value="Ongole"> Ongole</option>
+						  <option value="Osmanabad"> Osmanabad</option>
+						  <option value="Pakur"> Pakur</option>
+						  <option value="Palakkad"> Palakkad</option>
+						  <option value="Palamu"> Palamu</option>
+						  <option value="Pali"> Pali</option>
+						  <option value="Palwal"> Palwal</option>
+						  <option value="Panchkula"> Panchkula</option>
+						  <option value="Panchmahal"> Panchmahal</option>
+						  <option value="Panchsheel Nagar district (Hapur)"> Panchsheel Nagar district (Hapur)</option>
+						  <option value="Panipat"> Panipat</option>
+						  <option value="Panna"> Panna</option>
+						  <option value="Papum Pare"> Papum Pare</option>
+						  <option value="Parbhani"> Parbhani</option>
+						  <option value="Paschim Medinipur"> Paschim Medinipur</option>
+						  <option value="Patan"> Patan</option>
+						  <option value="Pathanamthitta"> Pathanamthitta</option>
+						  <option value="Pathankot"> Pathankot</option>
+						  <option value="Patiala"> Patiala</option>
+						  <option value="Patna"> Patna</option>
+						  <option value="Pauri Garhwal"> Pauri Garhwal</option>
+						  <option value="Perambalur"> Perambalur</option>
+						  <option value="Phek"> Phek</option>
+						  <option value="Pilibhit"> Pilibhit</option>
+						  <option value="Pithoragarh"> Pithoragarh</option>
+						  <option value="Pondicherry">  Pondicherry</option>
+						  <option value="Poonch">  Poonch</option>
+						  <option value="Porbandar"> Porbandar</option>
+						  <option value="Pratapgarh"> Pratapgarh</option>
+						  <option value="Pratapgarh"> Pratapgarh</option>
+						  <option value="Pudukkottai"> Pudukkottai</option>
+						  <option value="Pulwama"> Pulwama</option>
+						  <option value="Pune"> Pune</option>
+						  <option value="Purba Medinipur">  Purba Medinipur</option>
+						  <option value="Puri">  Puri</option>
+						  <option value="Purnia">  Purnia</option>
+						  <option value="Purulia">  Purulia</option>
+						  <option value="Raebareli">  Raebareli</option>
+						  <option value="Raichur">  Raichur</option>
+						  <option value="Raigad">  Raigad</option>
+						  <option value="Raigarh">  Raigarh</option>
+						  <option value="Raipur">  Raipur</option>
+						  <option value="Raisen">  Raisen</option>
+						  <option value="Rajauri">  Rajauri</option>
+						  <option value="Rajgarh">  Rajgarh</option>
+						  <option value="Rajkot"> Rajkot</option>
+						  <option value="Rajnandgaon"> Rajnandgaon</option>
+						  <option value="Rajsamand"> Rajsamand</option>
+						  <option value="Ramabai Nagar (Kanpur Dehat)"> Ramabai Nagar (Kanpur Dehat)</option>
+						  <option value="Ramanagara"> Ramanagara</option>
+						  <option value="Ramanathapuram"> Ramanathapuram</option>
+						  <option value="Ramban"> Ramban</option>
+						  <option value="Ramgarh"> Ramgarh</option>
+						  <option value="Rampur"> Rampur</option>
+						  <option value="Ranchi"> Ranchi</option>
+						  <option value="Ratlam">  Ratlam</option>
+						  <option value="Ratnagiri">  Ratnagiri</option>
+						  <option value="Rayagada">  Rayagada</option>
+						  <option value="Reasi">  Reasi</option>
+						  <option value="Rewa">  Rewa</option>
+						  <option value="Rewari">  Rewari</option>
+						  <option value="Ri Bhoi">  Ri Bhoi</option>
+						  <option value="Rohtak">  Rohtak</option>
+						  <option value="Rohtas">  Rohtas</option>
+						  <option value="Rudraprayag">  Rudraprayag</option>
+						  <option value="Rupnagar"> Rupnagar</option>
+						  <option value="Sabarkantha"> Sabarkantha</option>
+						  <option value="Sagar"> Sagar</option>
+						  <option value="Saharanpur"> Saharanpur</option>
+						  <option value="Saharsa"> Saharsa</option>
+						  <option value="Sahibganj">  Sahibganj</option>
+						  <option value="Saiha">  Saiha</option>
+						  <option value="Salem">  Salem</option>
+						  <option value="Samastipur">  Samastipur</option>
+						  <option value="Samba">  Samba</option>
+						  <option value="Sambalpur">  Sambalpur</option>
+						  <option value="Sangli"> Sangli</option>
+						  <option value="Sangrur"> Sangrur</option>
+						  <option value="Sant Kabir Nagar"> Sant Kabir Nagar</option>
+						  <option value="Sant Ravidas Nagar"> Sant Ravidas Nagar</option>
+						  <option value="Saran"> Saran</option>
+						  <option value="Satara"> Satara</option>
+						  <option value="Satna"> Satna</option>
+						  <option value="Sawai Madhopur"> Sawai Madhopur</option>
+						  <option value="Sehore"> Sehore</option>
+						  <option value="Senapati"> Senapati</option>
+						  <option value="Seoni"> Seoni</option>
+						  <option value="Seraikela Kharsawan"> Seraikela Kharsawan</option>
+						  <option value="Serchhip">  Serchhip</option>
+						  <option value="Shahdol">  Shahdol</option>
+						  <option value="Shahjahanpur">  Shahjahanpur</option>
+						  <option value="Shajapur">  Shajapur</option>
+						  <option value="Shamli">  Shamli</option>
+						  <option value="Sheikhpura">  Sheikhpura</option>
+						  <option value="Sheohar">  Sheohar</option>
+						  <option value="Sheopur">  Sheopur</option>
+						  <option value="Shimla">  Shimla</option>
+						  <option value="Shimoga">  Shimoga</option>
+						  <option value="Shivpuri">  Shivpuri</option>
+						  <option value="Shopian">  Shopian</option>
+						  <option value="Shravasti">  Shravasti</option>
+						  <option value="Sibsagar">  Sibsagar</option>
+						  <option value="Siddharthnagar">  Siddharthnagar</option>
+						  <option value="Sidhi"> Sidhi</option>
+						  <option value="Sikar"> Sikar</option>
+						  <option value="Simdega"> Simdega</option>
+						  <option value="Sindhudurg"> Sindhudurg</option>
+						  <option value="Singrauli"> Singrauli</option>
+						  <option value="Sirmaur"> Sirmaur</option>
+						  <option value="Sirohi"> Sirohi</option>
+						  <option value="Sirsa"> Sirsa</option>
+						  <option value="Sitamarhi"> Sitamarhi</option>
+						  <option value="Sitapur"> Sitapur</option>
+						  <option value="Sivaganga"> Sivaganga</option>
+						  <option value="Siwan"> Siwan</option>
+						  <option value="Solan"> Solan</option>
+						  <option value="Solapur">Solapur</option>
+						  <option value="Sonbhadra">Sonbhadra</option>
+						  <option value="Sonipat"> Sonipat</option>
+						  <option value="Sonitpur">Sonitpur</option>
+						  <option value="South 24 Parganas">South 24 Parganas</option>
+						  <option value="South Delhi">South Delhi</option>
+						  <option value="South Garo Hills">South Garo Hills</option>
+						  <option value="South Goa">South Goa</option>
+						  <option value="South Sikkim">South Sikkim</option>
+						  <option value="South Tripura">South Tripura</option>
+						  <option value="South West Delhi">South West Delhi</option>
+						  <option value="Sri Muktsar Sahib">Sri Muktsar Sahib</option>
+						  <option value="Srikakulam">Srikakulam</option>
+						  <option value="Srinagar">Srinagar</option>
+						  <option value="Subarnapur (Sonepur)">Subarnapur (Sonepur)</option>
+						  <option value="Sultanpur">Sultanpur</option>
+						  <option value="Sundergarh">Sundergarh</option>
+						  <option value="Supaul">Supaul</option>
+						  <option value="Surat">Surat</option>
+						  <option value="Surendranagar">Surendranagar</option>
+						  <option value="Surguja">Surguja</option>
+						  <option value="Tamenglong">Tamenglong</option>
+						  <option value="Tarn Taran">Tarn Taran</option>
+						  <option value="Tawang">Tawang</option>
+						  <option value="Tehri Garhwal">Tehri Garhwal</option>
+						  <option value="Thane">Thane</option>
+						  <option value="Thanjavur">Thanjavur</option>
+						  <option value="The Dangs">The Dangs</option>
+						  <option value="Theni">Theni</option>
+						  <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+						  <option value="Thoothukudi">Thoothukudi</option>
+						  <option value="Thoubal">Thoubal</option>
+						  <option value="Thrissur">Thrissur</option>
+						  <option value="Tikamgarh">Tikamgarh</option>
+						  <option value="Tinsukia">Tinsukia</option>
+						  <option value="Tirap">Tirap</option>
+						  <option value="Tiruchirappalli">Tiruchirappalli</option>
+						  <option value="Tirunelveli">Tirunelveli</option>
+						  <option value="Tirupur">Tirupur</option>
+						  <option value="Tiruvallur">Tiruvallur</option>
+						  <option value="Tiruvannamalai">Tiruvannamalai</option>
+						  <option value="Tiruvarur">Tiruvarur</option>
+						  <option value="Tonk">Tonk</option>
+						  <option value="Tuensang">Tuensang</option>
+						  <option value="Tumkur">Tumkur</option>
+						  <option value="Udaipur">Udaipur</option>
+						  <option value="Udalguri">Udalguri</option>
+						  <option value="Udham Singh Nagar">Udham Singh Nagar</option>
+						  <option value="Udhampur">Udhampur</option>
+						  <option value="Udupi">Udupi</option>
+						  <option value="Ujjain">Ujjain</option>
+						  <option value="Ukhrul">Ukhrul</option>
+						  <option value="Umaria">Umaria</option>
+						  <option value="Una">Una</option>
+						  <option value="Unnao">Unnao</option>
+						  <option value="Upper Siang">Upper Siang</option>
+						  <option value="Upper Subansiri">Upper Subansiri</option>
+						  <option value="Uttar Dinajpur">Uttar Dinajpur</option>
+						  <option value="Uttara Kannada">Uttara Kannada</option>
+						  <option value="Uttarkashi">Uttarkashi</option>
+						  <option value="Vadodara">Vadodara</option>
+						  <option value="Vaishali">Vaishali</option>
+						  <option value="Valsad">Valsad</option>
+						  <option value="Varanasi">Varanasi</option>
+						  <option value="Vellore">Vellore</option>
+						  <option value="Vidisha">Vidisha</option>
+						  <option value="Viluppuram">Viluppuram</option>
+						  <option value="Virudhunagar"> Virudhunagar</option>
+						  <option value="Visakhapatnam">Visakhapatnam</option>
+						  <option value="Vizianagaram">Vizianagaram</option>
+						  <option value="Vyara">Vyara</option>
+						  <option value="Warangal">Warangal</option>
+						  <option value="Wardha"> Wardha</option>
+						  <option value="Washim"> Washim</option>
+						  <option value="Wayanad">Wayanad</option>
+						  <option value="West Champaran">West Champaran</option>
+						  <option value="West Delhi">West Delhi</option>
+						  <option value="West Garo Hills">West Garo Hills</option>
+						  <option value="West Kameng">West Kameng</option>
+						  <option value="West Khasi Hills">West Khasi Hills</option>
+						  <option value="West Siang">West Siang</option>
+						  <option value="West Sikkim">West Sikkim</option>
+						  <option value="West Singhbhum">West Singhbhum</option>
+						  <option value="West Tripura"> West Tripura</option>
+						  <option value="Wokha"> Wokha</option>
+						  <option value="Yadgir"> Yadgir</option>
+						  <option value="Yamuna Nagar"> Yamuna Nagar</option>
+						  <option value="Yanam"> Yanam</option>
+						  <option value="Yavatmal"> Yavatmal</option>
+						  <option value="Zunheboto"> Zunheboto</option>
+						  </select>
+						  </div>
+						  <div class="checkbox"style="color:black;">
+						</div>
+									<button type="submit" class="btn btn-primary pull-center">Submit Form</button>
+								   <p class="change_link">  
+											Already a member ?
+											<a href="#tologin" class="to_register"> Go and log in </a>
+										</p>
+								</form>
+                            <!-- <form  action="mysuperscript.php" autocomplete="on"> 
+                                <h1> Sign up </h1> 
+                                <p> 
+                                    <label for="usernamesignup" class="uname" >Your username</label>
+                                    <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
+                                </p>
+                                <p> 
+                                    <label for="emailsignup" class="youmail"  > Your email</label>
+                                    <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com"/> 
+                                </p>
+                                <p> 
+                                    <label for="passwordsignup" class="youpasswd" >Your password </label>
+                                    <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                                </p>
+                                <p> 
+                                    <label for="passwordsignup_confirm" class="youpasswd" >Please confirm your password </label>
+                                    <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                                </p>
+                                <p class="signin button"> 
+									<input type="submit" value="Sign up"/> 
+								</p>
+                                <p class="change_link">  
+									Already a member ?
+									<a href="#tologin" class="to_register"> Go and log in </a>
+								</p>
+                            </form> -->
+                        </div>
+						
+                    </div>
+                </div>  
+            </section>
+		</div>
+		
+		<script>
+$('#cpassword').keyup(function(){
+	var password = $('#password').val();
+	var cpassword = $('#cpassword').val();
+	if(password != cpassword){
+		$('#show').css("display","block");
+	}
+	else{
+		$('#show').css("display","none");
+	}
+	
+});
+			
+		</script>
+		<script>
+				$(document).ready(function(){
+					$("#pass").click(function(){
+						$("#divpass").css("display", "block");
+						
+					});
+				});
+				</script>
+		<script type="text/javascript">var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:"c8b396a4b1b36df1042fa538f614c6819001402b51979831462095e37538a28070cb14981ef0ab3f91b85fac9aa93d23", values:{},ready:function(){$zoho.salesiq.floatbutton.visible('show');}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);</script>
+
+    </body>
+</html>

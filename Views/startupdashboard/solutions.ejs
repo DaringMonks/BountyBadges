@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        body { background-image:url('../images/thum.jpg');
+background-repeat:no-repeat;
+background-size:100% 400%;
+background-position:center;
+}
+
+.slidecontainer {
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-md-12">
+                <div class="container">
+                    <div class="row" style="margin-top:65px;">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                           
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="container">
+                    
+                </div>
+
+                <div class="container">
+                    <div class="row" style="margin-top:10px;">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                           
+							<h1 style="text-align:center"></h1><br><br>
+							<a style="color:white" href="/Shome"><h4 >Go Back</h4></a><br>
+							<% Solutions.forEach(function(solution){ %>
+						 <div class="jumbotron" style="border:1px solid white;background:#0071B8;color:white;">
+                             <small>Submitted by : <%= solution.Username %></small>
+							 <div class="row">
+							 <div class="col-md-3">
+								 <h3>Click to download solution</h3>
+							<a href=".<%= solution.Solution %>" download><button class="btn btn-primary" style="background:white;color:black">Download Solution</button></a>
+							 </div>
+							 <div class="col-md-9 text-left">
+                                    <% if(solution.isPOI == 'Yes'){ %>
+                                        <b>Assigned POI Ratings</b><br>
+                                        <div class="progress">
+                                                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="<%=solution.POI %>" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                                                  <%= solution.POI %>
+                                                </div>
+                                              </div>
+                                          <!-- <% if(solution.POI == 1){ %>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star "></span>
+                                            <span class="fa fa-star "></span>
+                                            <span class="fa fa-star "></span>
+                                            <span class="fa fa-star"></span>
+                                            <% }else if(solution.POI == 2) { %>
+                                                <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked "></span>
+                                            <span class="fa fa-star "></span>
+                                            <span class="fa fa-star "></span>
+                                            <span class="fa fa-star"></span>
+                                                    <% }else if(solution.POI == 3) { %>
+                                                        <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked "></span>
+                                                    <span class="fa fa-star checked "></span>
+                                                    <span class="fa fa-star "></span>
+                                                    <span class="fa fa-star"></span>
+                                                       <% }else if(solution.POI == 4) { %>
+                                                            <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked "></span>
+                                                        <span class="fa fa-star checked "></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star "></span>
+                                                            <% }else if(solution.POI == 5) { %>
+                                                                <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked "></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                                <% } %><br> -->
+                                        <% }else{ %>
+                                            <div class="container-fluid text-center">
+                                            <h4>POI Ratings :</h4>
+                                            <div class="slidecontainer">
+                                                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                                                  </div>
+                                                  <div style="display:none;">
+                                                        <form id="ratingform" action="/Srating/<%= solution.Name %>/<%= solution.UserEmail %>" method="POST">
+                                                        <input type="number" name="rating"  class="form-control" id="ratingbox">
+                                                        <input type="submit" class="btn btn-primary" value="Rate">
+                                                        </form></div>
+                                                    </div>
+                                              <% } %>
+                                 <% if(solution.isAuth == 'Yes'){ %>
+                                    <h2 style="color:red;">Already Authorized</h2>
+                                    <% }else{ %>
+                                        
+								 <a href="/Sauthenticate/<%= solution.Name %>/<%= solution.UserEmail %>">
+                                 <button style="color:white;margin-top:20px;" type="button" class="btn btn-primary">Authenticate  Solution</button></a>
+                                 <% } %>
+								 <h2><%= solution.Name %></h2>
+								 <p style="word-wrap: break-word"><%= solution.Description %></p>
+			 
+							 </div>
+							 </div>
+						 </div>
+                 
+                       <% }); %>
+								    
+
+
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+    <div class="container">
+            </div>
+    <div class="container">
+        <div class="row" style="margin-top:5px;">
+            
+
+
+        </div>
+    </div>
+    <br>
+    </div>
+    </div>
+    </div>
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById('myImg');
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+    </script>
+    <script type="text/javascript">var $zoho = $zoho || {}; $zoho.salesiq = $zoho.salesiq || { widgetcode: "c8b396a4b1b36df1042fa538f614c6819001402b51979831462095e37538a28070cb14981ef0ab3f91b85fac9aa93d23", values: {}, ready: function () { $zoho.salesiq.floatbutton.visible('show'); } }; var d = document; s = d.createElement("script"); s.type = "text/javascript"; s.id = "zsiqscript"; s.defer = true; s.src = "https://salesiq.zoho.com/widget"; t = d.getElementsByTagName("script")[0]; t.parentNode.insertBefore(s, t);</script>
+    <!-- <script>
+            $(document).ready(function(){
+            
+            /* 1. Visualizing things on Hover - See next part for action on click */
+            $('#stars li').on('mouseover', function(){
+              var onStar = parseInt($(this).data('value'), 10); // The star currently mouse on
+             
+              // Now highlight all the stars that's not after the current hovered star
+              $(this).parent().children('li.star').each(function(e){
+                if (e < onStar) {
+                  $(this).addClass('hover');
+                }
+                else {
+                  $(this).removeClass('hover');
+                }
+              });
+              
+            }).on('mouseout', function(){
+              $(this).parent().children('li.star').each(function(e){
+                $(this).removeClass('hover');
+              });
+            });
+            
+            
+            /* 2. Action to perform on click */
+            $('#stars li').on('click', function(){
+              var onStar = parseInt($(this).data('value'), 10); // The star currently selected
+              var stars = $(this).parent().children('li.star');
+              
+              for (i = 0; i < stars.length; i++) {
+                $(stars[i]).removeClass('selected');
+              }
+              
+              for (i = 0; i < onStar; i++) {
+                $(stars[i]).addClass('selected');
+              }
+              
+              // JUST RESPONSE (Not needed)
+              var ratingValue = parseInt($('#stars li.selected').last().data('value'), 10);
+                
+              $('#ratingbox').val(ratingValue);
+              $("#ratingform").submit();
+            });
+          });
+          
+          
+          
+          </script> -->
+          <script>
+               var slider = document.getElementById("myRange");
+               $('#ratingbox').val(slider.value);
+          $('#myRange').on('click',function(){
+              var poi = parseInt(this.value);
+              $('#ratingbox').val(poi);
+              $("#ratingform").submit();
+          });
+          </script>
+         
+                
+</body>
+
+</html>

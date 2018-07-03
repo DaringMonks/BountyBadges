@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Form</title>
+</head>
+<body>
+    <div class="container-fluid">
+<h1 style="text-align: center">Professors's Enquiry Form</h1><br><br>
+<% if(typeof message!== 'undefined') {%>
+<h4><%= message %></h4>
+<% } %>
+        <form action="/add-professors" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" name="Name" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="name">Gender:</label>
+              <select class="form-control" name="Gender"required>
+                  <option value="">Select Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+              </select>
+            </div>
+            <div class="form-group">
+                    <label for="name">Image:</label>
+                    <input type="file" name="Image" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="name">Location:</label>
+                      <input type="text" name="Location" class="form-control" required>
+                    </div>
+            <div class="form-group">
+              <label>Profession:</label>
+              <input type="text" name="Profession" class="form-control" required>
+            </div>
+            <div class="form-group">
+                    <label >Mobile:</label>
+                    <input type="number" name="Mobile" class="form-control" required>
+            </div>
+            <div class="form-group">
+                    <label>Email:</label>
+                    <input type="email" name="Email" class="form-control" required>
+           </div>
+           <div class="form-group">
+                <label>About:</label>
+                <textarea class="form-control" name="About" required></textarea>
+              </div>
+              <div class="form-group">
+                    <label>Educational Status:</label>
+                    <textarea class="form-control" name="Status" required></textarea>
+                  </div>
+                  <div class="form-group">
+                      <label>Subjects Taught:</label>
+                      <textarea class="form-control" name="Subjects" required></textarea>
+                    </div>
+              <div class="form-group">
+                    <label>Education1:</label>
+                    <input type="text" name="Education1" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Education2:</label>
+                    <input type="text" name="Education2" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label>Education3:</label>
+                    <input type="text" name="Education3" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label>Education4:</label>
+                    <input type="text" name="Education4" class="form-control">
+                  </div>
+                  <div class="form-group">
+                        <label>Experience1:</label>
+                        <input type="text" name="Experience1" class="form-control" required>
+                      </div>
+                      <div class="form-group">
+                        <label>Experience2:</label>
+                        <input type="text" name="Experience2" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label>Experience3:</label>
+                        <input type="text" name="Experience3" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label>Experience4:</label>
+                        <input type="text" name="Experience4" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label>Experience5:</label>
+                        <input type="text" name="Experience5" class="form-control">
+                      </div>
+                      <div class="form-group">
+                            <label>Address:</label>
+                            <input type="text" name="Address" class="form-control" required>
+                          </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+    <script type="text/javascript">var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:"c8b396a4b1b36df1042fa538f614c6819001402b51979831462095e37538a28070cb14981ef0ab3f91b85fac9aa93d23", values:{},ready:function(){$zoho.salesiq.floatbutton.visible('show');}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);</script>
+
+</body>
+</html>

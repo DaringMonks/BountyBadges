@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="../assests/img/sclogo.png" />
+    <style type="text/css">
+        body {
+background-image:url('../images/details.jpg');
+background-repeat:no-repeat;
+background-size:130% 100%;
+background-position:center;
+overflow-x: hidden;
+}
+
+        
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .header {
+            position: absolute;
+            height: 50px;
+            width: 100%;
+            background-color: blue;
+            z-index: 4;
+        }
+
+        .btn-default {
+            color: blue;
+            border-radius: 15px;
+            border: 1px solid blue;
+            width: 85%;
+        }
+
+        .btn-default a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        .btn-default a:hover {
+            color: white;
+        }
+
+        .btn-default:hover {
+            color: white;
+            background-color: blue;
+        }
+
+        .btn-default1 {
+            color: blue;
+            border-radius: 15px;
+            border: 1px solid blue;
+            background-color: white;
+            width: 55%;
+        }
+
+        .btn-default1 a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        .btn-default1 a:hover {
+            color: white;
+        }
+
+        .btn-default1:hover {
+            color: white;
+            background-color: blue;
+        }
+
+        .btn-default2 {
+            color: white;
+            border-radius: 15px;
+            border: 1px solid blue;
+            background-color: blue;
+            width: 25%;
+            margin-top: 5px;
+        }
+
+        .btn-default2 a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        .btn-default2 a:hover {
+            color: white;
+        }
+
+        .btn-default2:hover {
+            color: white;
+            background-color: darkblue;
+        }
+
+        .side-nav {
+            position: fixed;
+            width: 100%;
+            background-color: lightgrey;
+            height: 93.5vh;
+            z-index: 3;
+            margin-top: 50px;
+            overflow: auto;
+
+
+        }
+
+        .side-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        .side-nav ul li {
+            padding: 20px 10px;
+        }
+
+        .side-nav ul li a {
+            color: brown;
+            text-decoration: none;
+        }
+
+        .side-nav ul li a:hover {
+            color: blue;
+            text-decoration: none;
+        }
+
+        .div1 {
+            border: 1px solid blue;
+            border-radius: 15px;
+            color: white;
+            float: left;
+            height: 35px;
+            width: 180px;
+            text-align: center;
+            padding: 5px;
+            margin-left: 20px;
+        }
+
+        .div1:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        .div1 a {
+            text-decoration: none;
+            color: blue;
+
+        }
+
+        .div1 a:hover {
+            color: white;
+        }
+
+        .div2 {
+            border: 1px solid green;
+            color: green;
+            height: 30px;
+            width: 200px;
+            margin-left: 40px;
+            border-radius: 2px;
+            padding: 2px;
+            text-align: center;
+        }
+
+        .div2 a {
+            color: green;
+            text-decoration: none;
+        }
+
+        .div3 {
+            border: 1px solid skyblue;
+            color: skyblue;
+            height: 30px;
+            width: 150px;
+            margin-left: 60px;
+            border-radius: 2px;
+            padding: 2px;
+            text-align: center;
+        }
+
+        .div3 a {
+            color: skyblue;
+            text-decoration: none;
+        }
+
+        .div4 {
+            border: 1px solid skyblue;
+            color: skyblue;
+            height: 30px;
+            width: 120px;
+            border-radius: 2px;
+            padding: 2px;
+            text-align: center;
+        }
+
+        .div4 a {
+            color: skyblue;
+            text-decoration: none;
+        }
+
+        @media screen and (min-width:200px) {
+            .side-nav {
+                width: 200px;
+
+            }
+            .side-nav ul li span:nth-child(2) {
+                text-align: center;
+            }
+            .side-nav ul li i {
+                font-size: 26px;
+            }
+            .btn-default1 {
+                width: 100%;
+                font-size: 9px;
+            }
+            .btn-default2 {
+                width: 55%;
+                font-size: 10px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            h2 {
+                font-size: 24px;
+            }
+        }
+
+        @media screen and (min-width:320px) {
+            .side-nav {
+                width: 180px;
+                height: 116vh;
+
+            }
+            .side-nav ul li span:nth-child(2) {
+                text-align: center;
+            }
+            .side-nav ul li i {
+                font-size: 20px;
+            }
+            .btn-default {
+
+                font-size: 11px;
+            }
+            .btn-default1 {
+
+                font-size: 5px;
+            }
+            .btn-default2 {
+
+                font-size: 8px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            h2 {
+                font-size: 25px;
+            }
+        }
+
+        @media screen and (min-width:360px) {
+            .side-nav {
+                width: 180px;
+                height: 102vh;
+
+            }
+            .side-nav ul li span:nth-child(2) {
+                text-align: center;
+            }
+            .side-nav ul li i {
+                font-size: 26px;
+            }
+            .btn-default {
+
+                font-size: 11px;
+            }
+            .btn-default1 {
+
+                font-size: 9px;
+            }
+            .btn-default2 {
+                width: 75%;
+                font-size: 10px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            h2 {
+                font-size: 25px;
+            }
+        }
+
+        @media screen and (min-width:375px) {
+            .side-nav {
+                width: 180px;
+                height: 99vh;
+
+            }
+            .side-nav ul li span:nth-child(2) {
+                text-align: center;
+            }
+            .side-nav ul li i {
+                font-size: 20px;
+            }
+            .btn-default {
+
+                font-size: 11px;
+            }
+            .btn-default1 {
+
+                font-size: 9px;
+            }
+            .btn-default2 {
+                width: 75%;
+                font-size: 10px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            h2 {
+                font-size: 25px;
+            }
+        }
+
+        @media screen and (min-width:411px) {
+            .side-nav {
+                width: 200px;
+                height: 95vh;
+
+            }
+            .side-nav ul li span:nth-child(2) {
+                text-align: center;
+            }
+            .side-nav ul li i {
+                font-size: 26px;
+            }
+            .btn-default {
+                font-size: 11px;
+            }
+            .btn-default1 {
+                font-size: 11px;
+            }
+        }
+
+        @media screen and (min-width:768px) {
+            .side-nav {
+                width: 220px;
+                height: 95vh;
+
+            }
+            .side-nav ul li span:nth-child(2) {
+                text-align: center;
+            }
+            .side-nav ul li i {
+                font-size: 30px;
+            }
+
+            .btn-default {
+
+                font-size: 11px;
+            }
+            .btn-default1 {
+                width: 40%;
+                font-size: 10px;
+            }
+            .btn-default2 {
+                width: 30%;
+                font-size: 10px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            h2 {
+                font-size: 25px;
+            }
+        }
+
+        @media screen and(min-width:1024px) {
+            .side-nav {
+                width: 300px;
+                height: 130vh;
+
+
+            }
+            .side-nav ul li {
+                text-align: left;
+
+            }
+            .side-nav ul li span:nth-child(2) {
+                display: inline;
+            }
+            .side-nav ul li i {
+                font-size: 16px;
+            }
+            .btn-default1 {
+                width: 83%;
+                font-size: 13px;
+            }
+        }
+
+        .navbar-inverse {
+            background-color: rgb(34, 32, 178);
+            border: none;
+        }
+
+        
+        /* Style the Image Used to Trigger the Modal */
+
+        #myImg {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #myImg:hover {
+            opacity: 0.7;
+        }
+
+        /* The Modal (background) */
+
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content (Image) */
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 60%;
+            max-width: 700px;
+        }
+
+        /* Caption of Modal Image (Image Text) - Same Width as the Image */
+
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /* Add Animation - Zoom in the Modal */
+
+        .modal-content,
+        #caption {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* The Close Button */
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="container">
+        <div class="row">
+            <h1 style="text-align: center;color: blue"></h1>
+            <div class="col-md-12">
+                <div class="container">
+                    <div class="row" style="margin-top:25px;">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                            <a href="/home">
+                                <p style="color:black;font-size:11px;">
+                                    <b>
+                                        <u>Go Back</p>
+                                </u>
+                                </b>
+                                </p>
+                            </a>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+               <div class="container-fluid">
+                   <div class="row">
+                 <div class="col-md-2"></div>
+                  <div class="col-md-8 text-center" style="background:white;opacity:0.9;">
+                   <br>
+                            <% if(Challenge.Category == 'A'){ %>
+                                <h1>Digital Marketing And Growth Hacking</h1>
+                                <% } else if(Challenge.Category == 'B') { %>
+                                    <h1>Data And Web Analytics</h1>
+                                    <% } else if(Challenge.Category == 'C') { %>
+                                        <h1>Business Development And Strategy</h1>
+                                        <% } else if(Challenge.Category == 'D') { %>
+                                            <h1>Operation And Sales</h1>
+                                            <% } else if(Challenge.Category == 'E') { %>
+                                                <h1>Content Creation and Communication</h1>
+                                                <% } else if(Challenge.Category == 'F') { %>
+                                                    <h1>Web And Backend Development</h1>
+                                                    <% } else if(Challenge.Category == 'G') { %>
+                                                        <h1>Web And Frontend Development</h1>
+                                                        <% } else if(Challenge.Category == 'H') { %>
+                                                            <h1>Design And UX/UI</h1>
+                                                            <% } else if(Challenge.Category == 'I') { %>
+                                                                <h1>Blockchain Marketing</h1>
+                                                                <% } %>
+                                                                    <h2>
+                                                                        <%= Challenge.Name %>
+                                                                    </h2>
+                                                                    <br>
+                                                                    <h4>Work hours estimation:
+                                                                        <%= Challenge.Time %> hours</h4>
+                      
+
+                                 <br><br>
+                            <label>Help Resources</label>
+                            <% if( Extension == '.png' || Extension == '.jpeg' || Extension == '.jpg'){ %>
+                            <div class="challenge-thumbnail" style="border:1px solid black;">
+                                <!-- Trigger the Modal -->
+                                <img id="myImg"  class="img-responsive" src=".<%= Challenge.Example %>" alt="Example">
+
+                                <!-- The Modal -->
+                                <div id="myModal" class="modal">
+
+                                    <!-- The Close Button -->
+                                    <span class="close">&times;</span>
+
+                                    <!-- Modal Content (The Image) -->
+                                    <img class="modal-content" id="img01">
+
+                                    <!-- Modal Caption (Image Text) -->
+                                    <div id="caption"></div>
+                                </div>
+                                </div>
+                            <% } else{ %>
+                                <br>
+                                <h5>Click to Download Example</h5>
+                                <a href=".<%= Challenge.Example %>" download><button class="btn btn-primary">Download Example</button></a>
+                             <% } %>
+                     
+          
+                     <br><br>
+                <h3>Badge Skills</h3>
+                <textarea class="form-control" rows="4" readonly><%= Challenge.Skills %></textarea><br><br>
+                <h3> Description</h3>
+                <p>
+                    <%= Challenge.Description %>
+                </p>
+                <br>
+                <h3>Objectives</h3>
+                <div  class="container text-left">
+                <ul>
+                    
+                    <li>
+                        <%= Challenge.Objective1 %>
+                    </li>
+
+                    <li>
+                        <%= Challenge.Objective2 %>
+                    </li>
+
+                    <li>
+                        <%= Challenge.Objective3 %>
+                    </li>
+
+                    <li>
+                        <%= Challenge.Objective4 %>
+                    </li>
+
+                    <li>
+                        <%= Challenge.Objective5 %>
+                    </li>
+                </ul>
+            </div>
+               <br>
+                <a href="/accept">
+                    <button type="button" class="btn btn-default1 btn-md">
+                        <b>Accept Badge</b>
+                    </button>
+                </a>
+                <h3>Share With</h3>
+            <a href="#" id="share-tw" class="sharer button"><i class="fa fa-3x fa-twitter-square"></i></a>
+            <a href="#" id="share-li" class="sharer button"><i class="fa fa-3x fa-linkedin-square"></i></a>
+         <br><br>
+    </div>
+    <div class="col-md-2"></div>
+    </div>
+    </div>
+    <br>
+    </div>
+    </div>
+    </div>
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById('myImg');
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+    </script>
+    <script type="text/javascript">var $zoho = $zoho || {}; $zoho.salesiq = $zoho.salesiq || { widgetcode: "c8b396a4b1b36df1042fa538f614c6819001402b51979831462095e37538a28070cb14981ef0ab3f91b85fac9aa93d23", values: {}, ready: function () { $zoho.salesiq.floatbutton.visible('show'); } }; var d = document; s = d.createElement("script"); s.type = "text/javascript"; s.id = "zsiqscript"; s.defer = true; s.src = "https://salesiq.zoho.com/widget"; t = d.getElementsByTagName("script")[0]; t.parentNode.insertBefore(s, t);</script>
+    <script>
+            document.addEventListener("DOMContentLoaded", function(event) { 
+            
+            // Uses sharer.js 
+            //  https://ellisonleao.github.io/sharer.js/#twitter	
+               var url = window.location.href;
+               var title = document.title;
+               var subject = "Read this good article";
+               var via = "bootstrapC";
+               console.log( url );
+                console.log( title );
+            
+            
+            //twitter
+            $('#share-tw').attr('data-url', url).attr('data-title', title).attr('data-sharer', 'twitter');
+            //linkedin
+            $('#share-li').attr('data-url', url).attr('data-title', title).attr('data-sharer', 'linkedin');
+            // instagram
+              $('#share-em').attr('data-url', url).attr('data-title', title).attr('data-subject', subject).attr('data-sharer', 'email');
+            
+            //Prevent basic click behavior
+            $( ".sharer button" ).click(function() {
+              event.preventDefault();
+            });
+            
+            
+            });
+            
+            </script>
+</body>
+
+</html>

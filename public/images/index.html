@@ -1,0 +1,331 @@
+<!doctype html>
+<html>
+<head>
+  <title>Edumonk</title>
+    <link rel="shortcut icon" type="favicon.ico" href="images/logo.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Alegreya Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Coda Caption:800' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+     body,html{
+       position: relative;
+      width: 100%;
+      padding-top: 0px;
+      padding-bottom:0px;
+     color: #fff;
+     background-color:white;
+     /*background: url(images/bg-pattern.png),#7b4397;
+     background: url(images/bg-pattern.png),-webkit-linear-gradient(to left,#7b4397,#dc2430);
+     background: url(images/bg-pattern.png),linear-gradient(to left,#7b4397,#dc2430);*/
+      overflow-x: hidden;
+
+     }
+       a
+       {
+           color:white;
+       }
+       .navbar-brand{padding:4px;}
+       ul.nav> li {
+           padding-top:5px;
+        }
+        .info{
+            width:100%;
+            font-size:20px;
+            border-radius:50px;
+        }
+        #label{
+            font-size: 20px;
+            width:100%;
+        }
+        #timer{
+            color:white;
+            padding:50px;
+            margin-left:0px;
+        }
+        #message{
+            color:white;
+        }
+        #mockup{
+            height:450px;
+            width:250px;
+            display:block;
+            margin:0 auto;
+        }
+        .card {
+            height: 566px;
+        }
+        footer{
+
+            background-color:black;
+            color:white;
+            width:100%;
+            padding:5px;
+            bottom:0px;
+            position:static;
+            font-size:10px;
+
+        }
+        .goal{
+
+            padding:20px;
+            font-family:courier new;
+            font-weight:normal;
+            font-size: 20px;
+            display: flex;
+          }
+          .amb{
+            margin-top:0px;
+          }
+         
+
+.computer-img {
+    position: relative;
+    z-index: 99;
+    max-width: 100%;
+}   
+.navbar-inverse{
+	background:#dfdfe6;
+    border:none;
+    
+}
+#tv_container {
+    background: url('images/screen.png') no-repeat top left transparent;
+     background-size:100% 100%;    /* Adjust TV image width */
+    height: 450px;   
+    position: relative;
+}
+#tv_container video {
+    position: absolute;
+    top: 30px; /* Adjust top position */
+    left: 40px; /* Adjust left position */
+}
+
+
+
+  </style>
+    <script>
+
+        function resizeIframe(obj) {
+            console.log(obj);
+            console.log(window.innerWidth);
+            if(window.innerWidth<600)
+                obj.style.width = '350px';
+        }
+    </script>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106589946-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments)};
+        gtag('js', new Date());
+
+        gtag('config', 'UA-106589946-1');
+    </script>
+
+</head>
+<body>
+        <nav class="navbar navbar-inverse ">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="container">
+                    <div class="navbar-header ">
+                        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html"><img  src="images/logo.png" height="40px" width="40px"></a>
+                    </div>
+                    <!-- Collection of nav links and other content for toggling -->
+            
+                    <div id="navbarCollapse" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown"><a class="dropdown-toggle" style="color:#4a4344;"data-toggle="dropdown" href="#"><b>About us</b><span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="our-vision.html"style="color:#4a4344;"><b>Mission and Team</b> </a></li>
+                                    <li><a href="contact.html"style="color:#4a4344;"><b>Contact</b></a></li>
+                                    <li><a href="give-edumonk.html"style="color:#4a4344;"><b>Give Edumonk</b></a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a class="dropdown-toggle" style="color:#4a4344;"data-toggle="dropdown" href="#"><b>Programs</b><span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="programs.html"style="color:#4a4344;"><b>Overview</b></a></li>
+                                    <li><a href="teach.html"style="color:#4a4344;"><b>Teach For Good</b></a></li>
+                                    <li><a href="campaign.html"style="color:#4a4344;"><b>Campaign For Good</b></a></li>
+                                    <li><a href="tech.html"style="color:#4a4344;"><b>Tech For Good</b></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="gallery.html"style="color:#4a4344;"><b>Gallery</b></a></li>
+                            <li><a href="social.html"style="color:#4a4344;"><b>Social</b></a></li>
+                            <li><a href="http://www.edumonk.club"style="color:#4a4344;"><b>Blogs</b></a></li>
+                        </ul>
+            
+                    </div>
+                </div>
+            
+            </nav>
+
+
+<div class="row">
+    <div class="col-lg-12 col-md-12" style="border:0px grey solid">
+      <div class="container-fluid">
+        <div class="row amb">
+            <div class="col-lg-5 col-md-5 col-sm-5 text-center" style="background:white">
+                <!--<div>-->
+                <!--<span class="btn btn-danger info" >EduMonk App<img height="40px" width="40px" src="logo.png"></span>-->
+                <!--</div>-->
+                <h2 style="color:black;font-family:'Coda Caption';padding:5px;">OUR PROGRAMS</h2>
+                <div>
+                    <h5 style="color:#4A4344;font-family:'Alegreya Sans';font-weight:bolder;font-size:18px;">List of career counselling programs for students teachers and parents for exam preparation application form filling , addmission and university counselling guidance , internships , volunteering and finding job opportunites </h5>
+                </div>
+               <div class="imagevid"></div>
+               <div id="tv_container">
+    <iframe  style="margin-top:17px;" width="94%" height="316px"  src="https://www.youtube.com/embed/z7NikXE0T8M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+<!--     <img src="http://dottedi.com/wp-content/themes/dottedi/img/desktop-computer.png" class="computer-img">
+ -->                </div>
+            <div class="col-lg-4" id="message" style="background:white">
+
+<div class="mockups text-center" style="width:100%">
+	                <h2 style="color:black;font-family:Coda Caption;padding:5px;">TALK TO EDUMONK</h2>
+                  <h5 style="color:#4A4344;font-family:'Alegreya Sans';font-weight:bolder;font-size:18px">Our experts and volunteers are active 24*7 to help you for any study needs or getting suitable job opportunities within our network of people</h5>
+                    <img id="mockup" src="images/monkey.png">
+                </div>
+                        
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 card"  style="background:white">
+              <div class="text-center" style="color:black">
+                    <h2 style="color:black;font-family:Coda Caption;padding:5px;">ENQUIRY</h2><br>
+                    <form action="#" method="POST">
+                            <div class="form-group">
+                                    <label for="name">Your Name:</label>
+                                    <input type="text" class="form-control" name="name" id="name">
+                                  </div>
+                        <div class="form-group">
+                          <label for="email">Email address:</label>
+                          <input type="email" class="form-control" name="email" id="email">
+                        </div>
+                        <div class="form-group">
+                                <label for="mobile">Mobile Number:</label>
+                                <input type="number" class="form-control" name="mobile" id="mobile">
+                              </div>
+                        <div class="form-group">
+                          <label for="query">Query:</label>
+                          <textarea class="form-control" name="query" id="query"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                  <!-- <h2 style="color:black;font-family:Coda Caption;padding:5px;">JOIN OUR CLUB</h2>
+                <h5 style="color:#4A4344;font-family:'Alegreya Sans';font-weight:bolder;font-size:18px">We have an open community of students teachers, parents and edupreneurs in EDUMONK CLUB who help each other through collabrative thinking networking and sharing resources with each other. We conduct online as well as offline meetups for such people who are related to exams preparation, employment & student counseling services.These open communities bring in wisdom of the crowd which further helps everyone in the community to make the best possible future decisions about their career. </h5>
+            <br>
+            <div>
+                <span >
+                    <a href="http://edumonk.club/groups/"  target="blank">
+                        <img src="images/teachericon.png" width="240px" height="80px" target="blank"></a>
+                 </span>
+                 <br/>
+                 <br/>
+                <span>
+                            <a href="http://edumonk.club/groups/"  target="blank">
+                                <img src="images/studenticon.png" width="240px" height="80px">
+                            </a>
+                </span>
+                </div> -->
+                </div>
+                        <br>
+                  
+            </div>
+        </div>
+</div>
+
+    </div>
+</div>
+
+
+
+    <footer class="text-center">
+        <div class="row">
+            <div class="col-lg-3">
+                    <h5>Corporte Office</h5>
+        
+        
+        <p>1st Floor,  E-41, Panchsheel Park, South Delhi, Delhi, India Pin - 110017 | 9643754311 support@edumonk.org
+            </p>
+        </div>
+        <div class="col-lg-3">
+                <h5>Regional Office</h5>
+    
+    
+    <p>1/A Church Street,Gyan Jyoti Educational Services,S5 HighProfiles Buissness Centre, M G Road,Banglore,India Pin-560001
+        </p>
+    </div>
+    <div class="col-lg-3">
+            <h5>Regional Office</h5>
+
+
+<p>80,Manickkam Lane, Mount Road ,Guindy near Zend Garden Hotel Chennai , India Pin -600032
+    </p>
+</div>
+<div class="col-lg-3">
+        <h5>Regional Office</h5>
+
+
+<p>LG-13, Ashoka Mall(Opposite Hotel Sun N Sand),Bund Garden Road near Ranka Jeweller,Pune,Maharashtra,India Pin-411001
+ </p>
+</div><br><br>
+<h5> Copyright &#169; at EduMonk Foundation
+        <a href="https://www.facebook.com/edumonkfoundation/"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.youtube.com/channel/UC5Q6kbXwwZ79aydaoe80R2Q"><i class="fa fa-youtube"></i></a>
+        <a href="https://www.instagram.com/edumonk_/?hl=en"><i class="fa fa-instagram"></i></a>
+        <a href="https://twitter.com/Edumonk_"><i class="fa fa-twitter"></i></a>
+        <a style="background-color:white;color:black" href="privacy-policy.html">Privacy Policy </a>
+        &nbsp <a href="terms-condition.html" style="background-color:white;color:black">Terms & Conditions</a>
+</h5>
+
+        </div>
+
+    </footer>
+
+
+<!-- <script>
+
+    var mockupArray=["images/newlogo.png","images/newlogo1.png"];
+    var i=0;
+    setInterval(function(){
+        if(i>=2){
+            i=0;
+        }
+        var mockupImage=document.getElementById("mockup");
+        mockupImage.setAttribute("src",mockupArray[i]);
+        i++;
+    },1000);
+</script> -->
+    <script type="text/javascript">
+var _j = document.createElement("script");
+_j.setAttribute("src", "https://public.jetlink.io/Sdk/Jetlink.js?j=" + new Date(Date()).getTime() / 1000);
+_j.onload = function () { Jetlink.Init("jetlink-web-chat-fc1c19bd-b98d-404e", "e38e577d6d434f5f82b916c9daef8c78"); };
+document.head.appendChild(_j);
+</script>
+<script>
+var i = 0;
+var txt = '';
+var speed = 50;
+   if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+
+</script>
+</body>
+</html>
+<!-- <p style="text-align:justify">Edumonk, as the name suggests is a not for profit organisation based in Delhi, India which works in close proximity with
+        teachers of different subjects to create a worldwide learning community of teachers and students. we help teachers
+        to create and grow their brand value by tapping into different online and offline networks of teachers, educationist,
+        entrepreneurs etc and creating a collaborative value sharing community where they grow with peer to peer support..
+        </p> -->

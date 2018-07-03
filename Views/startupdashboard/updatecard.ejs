@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- BEGIN HEAD -->
+
+<% include ../includes/studentdashboard/head.ejs %>
+<!-- END HEAD -->
+<body class="page-header-fixed sidemenu-closed-hidelogo page-content-white page-md header-white white-sidebar-color logo-indigo">
+    <div class="page-wrapper">
+        <!-- start header -->
+		<% include ../includes/studentdashboard/header.ejs %>
+        <!-- end header -->
+        <!-- start color quick setting -->
+        <div class="quick-setting-main">
+			<button class="control-sidebar-btn btn" data-toggle="control-sidebar"><i class="fa fa-cog fa-spin"></i></button>
+			<div class="quick-setting display-none">
+				<ul id="themecolors" >
+				<li><p class="selector-title">Main Layouts</p></li>
+				<li class="complete"><div class="theme-color layout-theme">
+				<a href="#" data-theme="light"><span class="head"></span><span class="cont"></span></a>
+				<a href="http://radixtouch.in/templates/admin/smart/source/dark/all_courses.html" data-theme="dark"><span class="head"></span><span class="cont"></span></a>
+				</div></li>	
+				<li><p class="selector-title">Sidebar Color</p></li>
+				<li class="complete"><div class="theme-color sidebar-theme">
+				<a href="#" data-theme="white"><span class="head"></span><span class="cont"></span></a>
+				<a href="#" data-theme="dark"><span class="head"></span><span class="cont"></span></a>
+				<a href="#" data-theme="blue"><span class="head"></span><span class="cont"></span></a>
+				<a href="#" data-theme="indigo"><span class="head"></span><span class="cont"></span></a>
+				<a href="#" data-theme="cyan"><span class="head"></span><span class="cont"></span></a>
+				<a href="#" data-theme="green"><span class="head"></span><span class="cont"></span></a>
+				<a href="#" data-theme="red"><span class="head"></span><span class="cont"></span></a>
+				</div></li>
+             	<li><p class="selector-title">Header Brand color</p></li>
+             	<li class="theme-option"><div class="theme-color logo-theme">
+             	<a href="#" data-theme="logo-white"><span class="head"></span><span class="cont"></span></a>
+				<a href="#" data-theme="logo-dark"><span class="head"></span><span class="cont"></span></a>
+				<a href="#" data-theme="logo-blue"><span class="head"></span><span class="cont"></span></a>
+				<a href="#" data-theme="logo-indigo"><span class="head"></span><span class="cont"></span></a>
+				<a href="#" data-theme="logo-cyan"><span class="head"></span><span class="cont"></span></a>
+				<a href="#" data-theme="logo-green"><span class="head"></span><span class="cont"></span></a>
+				<a href="#" data-theme="logo-red"><span class="head"></span><span class="cont"></span></a>
+             	</div></li>
+             	<li><p class="selector-title">Header color</p></li>
+             	<li class="theme-option"><div class="theme-color header-theme">
+             	<a href="#" data-theme="header-white"><span class="head"></span><span class="cont"></span></a>
+             	<a href="#" data-theme="header-dark"><span class="head"></span><span class="cont"></span></a>
+             	<a href="#" data-theme="header-blue"><span class="head"></span><span class="cont"></span></a>
+             	<a href="#" data-theme="header-indigo"><span class="head"></span><span class="cont"></span></a>
+             	<a href="#" data-theme="header-cyan"><span class="head"></span><span class="cont"></span></a>
+             	<a href="#" data-theme="header-green"><span class="head"></span><span class="cont"></span></a>
+             	<a href="#" data-theme="header-red"><span class="head"></span><span class="cont"></span></a>
+             	</div></li>
+			</ul>
+			</div>
+		</div>
+		<!-- end color quick setting -->
+        <!-- start page container -->
+        <div class="page-container">
+ 			<!-- start sidebar menu -->
+ 			<% include ../includes/studentdashboard/sidebar.ejs %>
+			 <!-- end sidebar menu -->
+			<!-- start page content -->
+            <div class="page-content-wrapper">
+                <div class="page-content text-center">
+                        <div class="container">
+                                <h2 style="text-align:center">Update Your ID Card</h2>
+                                <table class="table table-hover">
+                                    <h2 style="text-align: center">Objectives</h2>
+                                  <thead>
+                                    <tr>
+                                      <th>Objectives</th>
+                                      <th>Edit</th>
+                                      <th>Delete</th>
+                                  </tr>
+                                  </thead>
+                                  <tbody>
+                                     <% Objective.forEach((objectives)=>{ %>
+                                        <form action="/editobjective/<%= objectives.id %>" method="POST">
+                                       <tr>
+                                      <td>
+                                            <div class="form-group">
+                                          <textarea name="Objective" class="form-control"><%= objectives.Objective %></textarea>
+                                          </div>
+                                        </td>
+                                           <td><input class="btn btn-primary" type="submit" value="update"></td>
+                                    </form>
+                                      <td><a href="deleteobjective/<%= objectives.id %>"><span class="fa fa-trash"></span></a></td>
+                                    </tr>
+                                
+                                    <% }); %>
+                                  </tbody>
+                                </table>
+                              
+                                <table class="table table-hover">
+                                      <h2 style="text-align: center">Interests</h2>
+                                      <thead>
+                                        <tr>
+                                          <th>Interests</th>
+                                          <th>Edit</th>
+                                          <th>Delete</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                         <% Interest.forEach((interests)=>{ %>
+                                            <form action="editinterest/<%= interests.id %>" method="POST">
+                                           <tr>
+                                          <td><textarea class="form-control" name="Interest"><%= interests.Interest %></textarea></td>
+                                          <td><input class="btn btn-primary" type="submit" value="Update"></td>
+                                        </form>
+                                          <td><a href="deleteinterest/<%= interests.id %>"><span class="fa fa-trash"></span></a></td>
+                                        </tr>
+                                        <% }); %>
+                                      </tbody>
+                                    </table>
+                                    <table class="table table-hover">
+                                          <h2 style="text-align: center">Skills</h2>
+                                          <thead>
+                                            <tr>
+                                              <th>Skills</th>
+                                              <th>Level</th>
+                                              <th>Edit</th>
+                                              <th>Delete</th>
+                                          </tr>
+                                          </thead>
+                                          <tbody>
+                                             <% Skill.forEach((skills)=>{ %>
+                                               <tr>
+                                                   <form action="editskill/<%= skills.id %>" method="POST">
+                                              <td><textarea name="SkillTitle" class="form-control"><%= skills.SkillTitle %></textarea></td>
+                                              <td><textarea name="SelectLevel" class="form-control"><%= skills.SelectLevel %></textarea></td>
+                                              <td><input class="btn btn-primary" type="submit" value="Update"></td>
+                                            </form>
+                                              <td><a href="deleteskill/<%= skills.id %>"><span class="fa fa-trash"></span></a></td>
+                                            </tr>
+                                            <% }); %>
+                                          </tbody>
+                                        </table>
+                                        <table class="table table-hover">
+                                              <h2 style="text-align: center">Projects</h2>
+                                              <thead>
+                                                <tr>
+                                                  <th>Project</th>
+                                                  <th>Description</th>
+                                                  <th>Edit</th>
+                                                  <th>Delete</th>
+                                              </tr>
+                                              </thead>
+                                              <tbody>
+                                                 <% Project.forEach((projects)=>{ %>
+                                                    <form action="editproject/<%= projects.id %>" method="POST">
+                                                   <tr>
+                                                  <td><textarea name="ProjectTitle" class="form-control"><%= projects.ProjectTitle %></textarea></td>
+                                                  <td><textarea name="ProjectDescription" class="form-control"><%= projects.ProjectDescription %></textarea></td>
+                                                  <td><input type="submit" value="Update" class="btn btn-primary"></td>
+                                                </form>
+                                                  <td><a href="deleteproject/<%= projects.id %>"><span class="fa fa-trash"></span></a></td>
+                                                </tr>
+                                                <% }); %>
+                                              </tbody>
+                                            </table>
+                                            <table class="table table-hover">
+                                                  <h2 style="text-align: center">Education</h2>
+                                                  <thead>
+                                                    <tr>
+                                                      <th>Education</th>
+                                                      <th>Institute</th>
+                                                      <th>Marks</th>
+                                                      <th>Duration</th>
+                                                      <th>Edit</th>
+                                                      <th>Delete</th>
+                                                  </tr>
+                                                  </thead>
+                                                  <tbody>
+                                                     <% Education.forEach((education)=>{ %>
+                                                        <form action="editeducation/<%= education.id %>">
+                                                       <tr>
+                                                      <td><textarea name="Class" class="form-control"><%= education.Class %></textarea></td>
+                                                      <td><textarea name="Instname" class="form-control"><%= education.Instname %></textarea></td>
+                                                      <td><textarea name="Marks" class="form-control"><%= education.Marks %></textarea></td>
+                                                      <td><textarea name="Duration" class="form-control"><%= education.Duration %></textarea></td>
+                                                      <td><input type="submit" class="btn btn-primary" value="Update"></td>
+                                                    </form>
+                                                      <td><a href="deleteeducation/<%= education.id %>"><span class="fa fa-trash"></span></a></td>
+                                                    </tr>
+                                                    <% }); %>
+                                                  </tbody>
+                                                </table>
+                                    
+                              </div>
+                              
+						
+			   </div>
+			</div>
+            <!-- end page content -->
+           
+        </div>
+        <!-- end page container -->
+        <!-- start footer -->
+		<% include ../includes/studentdashboard/footer.ejs %>
+        <!-- end footer -->
+    </div>
+    <!-- start js include path -->
+    <script src="../assets/plugins/jquery/jquery.min.js" ></script>
+    <script src="../assets/plugins/popper/popper.js" ></script>
+    <script src="../assets/plugins/jquery-blockui/jquery.blockui.min.js" ></script>
+	<script src="../assets/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+    <!-- bootstrap -->
+    <script src="../assets/plugins/bootstrap/js/bootstrap.min.js" ></script>
+    <script src="../assets/plugins/bootstrap-switch/js/bootstrap-switch.min.js" ></script>
+    <!-- data tables -->
+    <script src="../assets/plugins/datatables/jquery.dataTables.min.js" ></script>
+ 	<script src="../assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.js" ></script>
+    <script src="../assets/js/pages/table/table_data.js" ></script>
+    <!-- Common js-->
+	<script src="../assets/js/app.js" ></script>
+    <script src="../assets/js/layout.js" ></script>
+	<script src="../assets/js/theme-color.js" ></script>
+	<!-- Material -->
+	<script src="../assets/plugins/material/material.min.js"></script>
+	 <!-- end js include path -->
+	 <script type="text/javascript">var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:"c8b396a4b1b36df1042fa538f614c6819001402b51979831462095e37538a28070cb14981ef0ab3f91b85fac9aa93d23", values:{},ready:function(){$zoho.salesiq.floatbutton.visible('show');}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);</script>
+    
+</body>
+
+<!-- Mirrored from radixtouch.in/templates/admin/smart/source/light/all_courses.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 May 2018 09:49:37 GMT -->
+</html>
